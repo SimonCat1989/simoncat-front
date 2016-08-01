@@ -1,0 +1,7 @@
+mvn archetype:generate -DgroupId=com.simoncat.front -DartifactId=simoncat-home-front -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+mvn dependency:sources
+mvn dependency:resolve -Dclassifier=javadoc
+
+The first command will attempt to download source code for each of the dependencies in your pom file.
+The second command will attempt to download the Javadocs.
