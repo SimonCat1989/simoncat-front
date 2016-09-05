@@ -5,3 +5,6 @@ mvn dependency:resolve -Dclassifier=javadoc
 
 The first command will attempt to download source code for each of the dependencies in your pom file.
 The second command will attempt to download the Javadocs.
+
+git remote add oschina git@git.oschina.net:simoncatx_x/simoncat-install-environment.git
+git remote set-url oschina git@git.oschina.net:simoncatx_x/simoncat-install-environment.git
