@@ -1,0 +1,107 @@
+.a60degree_gray, #a60degree_gray { background:url(../img/bg/patterns/60degree_gray.png) repeat; }
+.a45degreee_fabric, #a45degreee_fabric { background:url(../img/bg/patterns/45degreee_fabric.png) repeat; }
+.bgnoise_lg, #bgnoise_lg { background:url(../img/bg/patterns/bgnoise_lg.png) repeat; }
+.bright_squares, #bright_squares { background:url(../img/bg/patterns/bright_squares.png) repeat; }
+.brushed_alu, #brushed_alu { background:url(../img/bg/patterns/brushed_alu.png) repeat; }
+.circles, #circles { background:url(../img/bg/patterns/circles.png) repeat; }
+.concrete_wall_2, #concrete_wall_2 { background:url(../img/bg/patterns/concrete_wall_2.png) repeat; }
+.cubes, #cubes { background:url(../img/bg/patterns/cubes.png) repeat; }
+.elegant_grid, #elegant_grid { background:url(../img/bg/patterns/elegant_grid.png) repeat; }
+.fabric_1, #fabric_1 { background:url(../img/bg/patterns/fabric_1.png) repeat; }
+.fancy_deboss, #fancy_deboss { background:url(../img/bg/patterns/fancy_deboss.png) repeat; }
+.grunge_wall, #grunge_wall { background:url(../img/bg/patterns/grunge_wall.png) repeat; }
+.light_honeycomb, #light_honeycomb { background:url(../img/bg/patterns/light_honeycomb.png) repeat; }
+.noise_pattern_with_crosslines, #noise_pattern_with_crosslines { background:url(../img/bg/patterns/noise_pattern_with_crosslines.png) repeat; }
+.paven, #paven { background:url(../img/bg/patterns/paven.png) repeat; }
+.roughcloth, #roughcloth { background:url(../img/bg/patterns/roughcloth.png) repeat; }
+.silver_scales, #silver_scales { background:url(../img/bg/patterns/silver_scales.png) repeat; }
+.smooth_wall, #smooth_wall { background:url(../img/bg/patterns/smooth_wall.png) repeat; }
+.soft_circle_scales, #soft_circle_scales { background:url(../img/bg/patterns/soft_circle_scales.png) repeat; }
+.soft_wallpaper, #soft_wallpaper { background:url(../img/bg/patterns/soft_wallpaper.png) repeat; }
+.subtle_freckles, #subtle_freckles { background:url(../img/bg/patterns/subtle_freckles.png) repeat; }
+.washi, #washi { background:url(../img/bg/patterns/washi.png) repeat; }
+.wavecut, #wavecut { background:url(../img/bg/patterns/wavecut.png) repeat; }
+.white_carbon, #white_carbon { background:url(../img/bg/patterns/white_carbon.png) repeat; }
+.whitey, #whitey { background:url(../img/bg/patterns/whitey.png) repeat; }
+.vichy, #vichy { background:url(../img/bg/patterns/vichy.png) repeat; }
+.xv, #xv { background:url(../img/bg/patterns/xv.png) repeat; }
+.wood1, #wood1 { background:url(../img/bg/patterns/wood1.jpg) repeat; }
+
+.black_denim, #black_denim { background:url(../img/bg/patterns/black_denim.png) repeat; }
+.black_linen_v2, #black_linen_v2 { background:url(../img/bg/patterns/black_linen_v2.png) repeat; }
+.black-Linen, #black-Linen { background:url(../img/bg/patterns/black-Linen.png) repeat; }
+.dark_wood, #dark_wood { background:url(../img/bg/patterns/dark_wood.png) repeat; }
+
+.random_grey_variations, #random_grey_variations { background:url(../img/bg/patterns/random_grey_variations.png) repeat; }
+.tactile_noise, #tactile_noise { background:url(../img/bg/patterns/tactile_noise.png) repeat; }
+.wood_1, #wood_1 { background:url(../img/bg/patterns/wood_1.png) repeat; }
+.wood_pattern, #wood_pattern { background:url(../img/bg/patterns/wood_pattern.png) repeat; }
+
+#toggle { 
+	position:fixed;
+	top:40px;
+	left:0;
+	display:block;
+	background:url(settings-toggle.png) no-repeat;
+	width:47px;
+	height:77px;
+	cursor:pointer;
+}
+#demo-settings {
+	position:absolute;
+	top:20px;
+	left:-10px;
+	z-index:999;
+	padding:20px 20px 20px 30px;
+	width:220px;
+	background:#fff;
+	display:none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#demo-settings .change {
+	float:left;
+	display:block;
+	width:40px;
+	height:40px;
+	margin:0 20px 20px 0;
+	text-decoration:none;
+	cursor:pointer;
+}
+#demo-settings span.last { margin-right:0; }
+#demo-settings h2 {
+	font-family:"Trebuchet MS";
+	font-size:16px;
+	margin:0 0 4px 0;
+}
+#demo-settings a { text-decoration:none; }
+#demo-settings .puchase { margin:0 10px 0 12px; }
+.hr { 
+	margin:0 0 10px 0;
+	height:1px;
+	border-top:2px solid #000;
+	border-bottom:1px solid #000;
+	clear:both;
+}
+.puchase-button,
+.tour-button {
+	display:block;
+	height:29px;
+	float:left;
+	margin-bottom:6px;
+}
+.puchase-button { 
+	width:150px;
+	background:url(button-purchase.png) no-repeat;
+	margin-left:33px;
+}
+.tour-button { 
+	width:89px;
+	background:url(http://graphic-dev.com/templates/notebook/demo/button-tour.png) no-repeat;
+	margin-left:10px;
+}
+.puchase-button:hover,
+.tour-button:hover { background-position: 0 -29px; }
+.puchase-button:active,
+.tour-button:active { background-position: 0 -58px; }

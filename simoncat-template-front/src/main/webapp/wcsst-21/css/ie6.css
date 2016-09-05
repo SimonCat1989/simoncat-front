@@ -1,0 +1,24 @@
+.main-t {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/main-t.png', sizingMethod='image');
+}
+.main-b {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/main-b.png', sizingMethod='image');
+}
+.main-c {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/main-c.png', sizingMethod='scale');
+}
+.slider-bg {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/slider-bg.png', sizingMethod='image');
+}
+.box-quick .box-bg {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/box-quick.png', sizingMethod='image');
+}
+.box-services .box-bg {
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/box-services.png', sizingMethod='image');
+}
