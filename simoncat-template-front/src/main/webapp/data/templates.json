@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "id": "burstfly",
+            "name": "Burstfly",
+            "description": "A modern visually appealing html5 template released by designscrazed. This template is responsive and has brilliantly designed inner page/post to get better pageviews and hits.",
+            "type": "design_photography",
+            "usage": "Grid"
+        },
+        {
+            "id": "adminlte-master",
+            "name": "Admin LTE Master",
+            "description": "Admin LTE is a free Bootstrap dashboard theme from almsaeedstudio. It is fully responsive and built on top of Bootstrap 3.",
+            "type": "design_photography",
+            "usage": "Dashboard"
+        },
+        {
+            "id": "blandodyssey",
+            "name": "Blandodyssey",
+            "description": "Simple template for multiple cases. You can use it as personal blog website. Also, you can use it as commercial user support website.",
+            "type": "business_corporate",
+            "usage": "Business & Blog"
+        },
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "description": "Dashboard template with multiple components.",
+            "type": "design_photography",
+            "usage": "Dashboard"
+        },
+        {
+            "id": "delphic",
+            "name": "Delphic",
+            "description": "Delphic is a clean and minimalist HTML template that is convenient to use as an online creative portfolio. And it is totally free!",
+            "type": "business_corporate",
+            "usage": "Business"
+        },
+        {
+            "id": "faculty",
+            "name": "Faculty",
+            "description": "Resume website template.",
+            "type": "home_family",
+            "usage": "Personal & Resume"
+        },
+        {
+            "id": "future-imperfect",
+            "name": "Future Imperfect",
+            "description": "Future Imperfect is a HTML5 responsive site template available for desktop, tablet and mobile. It has a side column and a fixed menu at the top and an off-canvas menu.",
+            "type": "design_photography",
+            "usage": "Blog & Photo"
+        },
+        {
+            "id": "html5up-prologue",
+            "name": "Html5up Prologue",
+            "description": "The Prologue Responsive Html5 Template is a one page website design with a nice navigational sidebar. This makes it easy to customize and make your own.",
+            "type": "home_family",
+            "usage": "Personal & Resume"
+        }
+    ]
+}

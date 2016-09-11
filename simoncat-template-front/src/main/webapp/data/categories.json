@@ -1,0 +1,87 @@
+{
+    "real_estate": {
+        "id": "real_estate",
+        "name": "Themes for Real Estate Websites",
+        "icon": "fa fa-building"
+    },
+    "medical_healthcare": {
+        "id": "medical_healthcare",
+        "name": "Themes for Medical & Healthcare Websites",
+        "icon": "fa fa-heartbeat"
+    },
+    "society_people": {
+        "id": "society_people",
+        "name": "Themes for Society & People Websites",
+        "icon": "fa fa-users"
+    },
+    "gitf_flower": {
+        "id": "gitf_flower",
+        "name": "Themes for Holidays, Gifts & Flowers Websites",
+        "icon": "fa fa-gift"
+    },
+    "entertainment_game": {
+        "id": "entertainment_game",
+        "name": "Themes for Entertainment, Games & Nightlife Websites",
+        "icon": "fa fa-gamepad"
+    },
+    "home_family": {
+        "id": "home_family",
+        "name": "Themes for Home & Family",
+        "icon": "fa fa-home"
+    },
+    "food_restaurant": {
+        "id": "food_restaurant",
+        "name": "Themes for Food & Restaurant Websites",
+        "icon": "fa fa-cutlery"
+    },
+    "computer_internet": {
+        "id": "computer_internet",
+        "name": "Themes for Computers & Internet Websites",
+        "icon": "fa fa-laptop"
+    },
+    "fashion_beauty": {
+        "id": "fashion_beauty",
+        "name": "Themes for Fashion & Beauty Websites",
+        "icon": "fa fa-female"
+    },
+    "outdoor_travel": {
+        "id": "outdoor_travel",
+        "name": "Themes for Outdoors & Travel Websites",
+        "icon": "fa fa-globe"
+    },
+    "car_motorcycle": {
+        "id": "car_motorcycle",
+        "name": "Themes for Cars & Motorcycles Websites",
+        "icon": "fa fa-car"
+    },
+    "business_corporate": {
+        "id": "business_corporate",
+        "name": "Themes for Business & Corporate Websites",
+        "icon": "fa fa-briefcase"
+    },
+    "education_book": {
+        "id": "education_book",
+        "name": "Themes for Education & Books Websites",
+        "icon": "fa fa-book"
+    },
+    "sell_electronics": {
+        "id": "sell_electronics",
+        "name": "Themes for Websites Selling Electronics & Gadgets",
+        "icon": "fa fa-shopping-cart"
+    },
+    "design_photography": {
+        "id": "design_photography",
+        "name": "Themes for Design & Photography Websites",
+        "icon": "fa fa-lightbulb-o"
+    },
+    "animal_pet": {
+        "id": "animal_pet",
+        "name": "Themes for Animals & Pets Websites",
+        "icon": "fa fa-paw"
+    },
+    "art_culture": {
+        "id": "art_culture",
+        "name": "Themes for Art & Culture Websites",
+        "icon": "fa fa-university"
+    }
+}

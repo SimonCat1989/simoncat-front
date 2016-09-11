@@ -13,6 +13,7 @@ $(document).ready(function() {
     opacity : '1'
   }, 500);
 
+  initPage();
 });
 
 /* TRANSITION PAGE */
@@ -325,14 +326,11 @@ $(document).on('touchend mouseout', '#oldnew-prev', function(event) {
 
 /* FORMULAIRE NEWSLETTER */
 
-$("form").on(
-    "submit",
-    function(event) {
-      event.preventDefault();
-      $.post("/burstfly/form-burstfly-modified.asp", $("form").serialize(),
-          function(data) {// alert(data);
-          });
-    });
+$("form").on("submit", function(event) {
+  event.preventDefault();
+  $.post("/burstfly/form-burstfly-modified.asp", $("form").serialize(), function(data) {// alert(data);
+  });
+});
 
 /* PRELOADER */
 
@@ -395,3 +393,19 @@ function addLoadEvent(func) {
   }
 }
 addLoadEvent(preloader);
+
+var template_categories = {};
+
+function initPage() {
+  $.getJSON("data/categories.json", function(categoryData) {
+    template_categories = categoryData;
+
+    $.getJSON("data/templates.json", function(templatesData) {
+      var data = templatesData["data"];
+      for ( var card in data) {
+        data[card]["icon_class"] = template_categories[data[card]["type"]]["icon"];
+      }
+      $("#main-container").html($.templates("#template_card").render(templatesData));
+    });
+  });
+}
