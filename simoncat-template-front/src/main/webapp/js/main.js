@@ -17,22 +17,10 @@ $(document).ready(function() {
 });
 
 /* TRANSITION PAGE */
-var speed = 'slow';
-
 $('html, body').hide();
 
 $(document).ready(function() {
-  $('html, body').fadeIn(speed, function() {
-    $('a[href], button[href]').click(function(event) {
-      var url = $(this).attr('href');
-      if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0)
-        return;
-      event.preventDefault();
-      $('html, body').fadeOut(speed, function() {
-        window.location = url;
-      });
-    });
-  });
+  $('html, body').fadeIn('slow');
 });
 
 /* DISABLE HOVER EFFECT WHILE YOU SCROLL FOR A SMOOTHY NAVIGATION */
@@ -326,11 +314,14 @@ $(document).on('touchend mouseout', '#oldnew-prev', function(event) {
 
 /* FORMULAIRE NEWSLETTER */
 
-$("form").on("submit", function(event) {
-  event.preventDefault();
-  $.post("/burstfly/form-burstfly-modified.asp", $("form").serialize(), function(data) {// alert(data);
-  });
-});
+$("form").on(
+    "submit",
+    function(event) {
+      event.preventDefault();
+      $.post("/burstfly/form-burstfly-modified.asp", $("form").serialize(),
+          function(data) {// alert(data);
+          });
+    });
 
 /* PRELOADER */
 
@@ -397,15 +388,22 @@ addLoadEvent(preloader);
 var template_categories = {};
 
 function initPage() {
-  $.getJSON("data/categories.json", function(categoryData) {
-    template_categories = categoryData;
+  $
+      .getJSON(
+          "data/categories.json",
+          function(categoryData) {
+            template_categories = categoryData;
 
-    $.getJSON("data/templates.json", function(templatesData) {
-      var data = templatesData["data"];
-      for ( var card in data) {
-        data[card]["icon_class"] = template_categories[data[card]["type"]]["icon"];
-      }
-      $("#main-container").html($.templates("#template_card").render(templatesData));
-    });
-  });
+            $
+                .getJSON(
+                    "data/templates.json",
+                    function(templatesData) {
+                      var data = templatesData["data"];
+                      for ( var card in data) {
+                        data[card]["icon_class"] = template_categories[data[card]["type"]]["icon"];
+                      }
+                      $("#main-container").html(
+                          $.templates("#template_card").render(templatesData));
+                    });
+          });
 }

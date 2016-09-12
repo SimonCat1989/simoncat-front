@@ -55,6 +55,97 @@
             "description": "The Prologue Responsive Html5 Template is a one page website design with a nice navigational sidebar. This makes it easy to customize and make your own.",
             "type": "home_family",
             "usage": "Personal & Resume"
+        },
+        {
+            "id": "idealab",
+            "name": "IdeaLab",
+            "description": "XHTML 1.0 Transitional, Fixed Width, 2 Columns, Dark on Light, architecture, blog, clean, jquery, law, lawyer or legal, medical, blue, light grey",
+            "type": "business_corporate",
+            "usage": "Business & government"
+        },
+        {
+            "id": "jetbiz",
+            "name": "Jetbiz",
+            "description": "XHTML 1.0 Transitional, Fixed Width, 2 Columns, Dark on Light, Medical, Finance, Light Grey, Light Blue",
+            "type": "business_corporate",
+            "usage": "Medical & Finance"
+        },
+        {
+            "id": "left",
+            "name": "Left",
+            "description": "Simple view with leather design. For Blog or leather product selling is a good choice.",
+            "type": "design_photography",
+            "usage": "Blog && Leather Product"
+        },
+        {
+            "id": "legend",
+            "name": "Legend",
+            "description": "All in One Page, extremely elegant and clean, multiple platforms support",
+            "type": "design_photography",
+            "usage": "Personal & Business"
+        },
+        {
+            "id": "notebook",
+            "name": "Notebook",
+            "description": "Really special, attractive graphics of paper notebook style layout.",
+            "type": "design_photography",
+            "usage": "Personal & Business"
+        },
+        {
+            "id": "onepage",
+            "name": "Onepage",
+            "description": "Maybe the best personal website design i have seen by now.",
+            "type": "home_family",
+            "usage": "Personal & Resume"
+        },
+        {
+            "id": "paper-blog",
+            "name": "Paper Blog",
+            "description": "The green leaves artwork with paper design really attract people.",
+            "type": "design_photography",
+            "usage": "Personal & Blog"
+        },
+        {
+            "id": "responsiva",
+            "name": "Responsiva",
+            "description": "HTML 5, Responsive, 2 Columns, Dark on Light, blog, personal, responsive, light grey, light blue",
+            "type": "design_photography",
+            "usage": "Personal & Blog"
+        },
+        {
+            "id": "resume",
+            "name": "Resume",
+            "description": "Simple and clean online resume. Prepare one for your job hunting !",
+            "type": "home_family",
+            "usage": "Personal & Resume"
+        },
+        {
+            "id": "sanaroo",
+            "name": "Sanaroo",
+            "description": "Personal portfolio website with rich resources support such as picture, video and so on.",
+            "type": "home_family",
+            "usage": "Personal & Resume"
+        },
+        {
+            "id": "sima",
+            "name": "Sima",
+            "description": "One page / multipage template with smooth and clean effect, Craft a unique website with portfolio, teams, pricing, testimonials and many other sections you may need occasionally.",
+            "type": "business_corporate",
+            "usage": "Business & Blog"
+        },
+        {
+            "id": "striped",
+            "name": "Striped",
+            "description": "Timeline design can be used for both business and personal blog.",
+            "type": "business_corporate",
+            "usage": "Business & Blog"
+        },
+        {
+            "id": "wcsst-21",
+            "name": "Wcsst 21",
+            "description": "Attractive personal website template with paper layout design and pencil marks. Make people feel relax.",
+            "type": "home_family",
+            "usage": "Personal & Resume"
         }
     ]
 }
