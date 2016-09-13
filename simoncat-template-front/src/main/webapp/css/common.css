@@ -44,3 +44,44 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/*----------------------------*/
+/* CUSTOM STYLE SETTINGS */
+/*----------------------------*/
+a {
+  text-decoration: none;
+}
+
+body, html {
+  background-color: #F4F4F4;
+  min-width: 896 px;
+}
+
+.disable-hover {
+  pointer-events: none;
+}
+
+.transition_ease_in_out {
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.25s ease-in-out; /** Firefox **/
+  -o-transition: all 0.25s ease-in-out; /** Opera **/
+}
+
+/*----------------------------*/
+/* CUSTOM SCROLLBAR  */
+/*----------------------------*/
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+  border: thin solid lightgray;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border: thin solid gray;
+}

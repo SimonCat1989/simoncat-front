@@ -8,17 +8,15 @@
 <link rel="icon" type="img/png" href="image/small-logo-01.png">
 <link href='lib/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 <link href='css/common.css' rel='stylesheet' type='text/css'>
-<link href='css/font.css' rel='stylesheet' type='text/css'>
-<link href='css/special.css' rel='stylesheet' type='text/css'>
 <link href='css/main.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <a name="ancre"></a>
-  <!-- CACHE -->
-  <div class="cache"></div>
+  <!-- Front Curtain to Simulate fade in animation -->
+  <div class="front_curtain"></div>
+
   <!-- HEADER -->
   <div id="wrapper-header">
-    <div id="main-header" class="object">
+    <div id="main-header" class="transition_ease_in_out">
       <div class="logo">
         <img src="image/small-logo.png" alt="logo burstfly" style="height: 35px;">
       </div>
@@ -27,127 +25,19 @@
           <input type="text" name="search" id="tip_search_input" list="search" autocomplete=off required>
         </form>
       </div>
-      <div id="stripes"></div>
     </div>
   </div>
+
   <!-- NAVBAR -->
   <div id="wrapper-navbar">
-    <div class="navbar object">
-      <div id="wrapper-sorting">
-        <div id="wrapper-title-1">
-          <div class="top-rated object">Top-rated</div>
-          <div id="fleche-nav-1"></div>
-        </div>
-        <div id="wrapper-title-2">
-          <a href="#"><div class="recent object">Recent</div></a>
-          <div id="fleche-nav-2"></div>
-        </div>
-        <div id="wrapper-title-3">
-          <a href="#"><div class="oldies object">Oldies</div></a>
-          <div id="fleche-nav-3"></div>
-        </div>
-      </div>
-      <div id="wrapper-bouton-icon">
-        <!-- To be improved -->
-        <div id="bouton-psd" alt="Themes for Real Estate Websites">
-          <i class="fa fa-building" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-theme" alt="Themes for Medical & Healthcare Websites">
-          <i class="fa fa-heartbeat" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-font" alt="Themes for Society & People Websites">
-          <i class="fa fa-users" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-photo" alt="Themes for Holidays, Gifts & Flowers Websites">
-          <i class="fa fa-gift" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-premium" alt="Themes for Entertainment, Games & Nightlife Websites">
-          <i class="fa fa-gamepad" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-ai" alt="Themes for Home & Family">
-          <i class="fa fa-home" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-psd" alt="Themes for Food & Restaurant Websites">
-          <i class="fa fa-cutlery" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-theme" alt="Themes for Computers & Internet Websites">
-          <i class="fa fa-laptop" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-font" alt="Themes for Fashion & Beauty Websites">
-          <i class="fa fa-female" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-photo" alt="Themes for Outdoors & Travel Websites">
-          <i class="fa fa-globe" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-premium" alt="Themes for Cars & Motorcycles Websites">
-          <i class="fa fa-car" aria-hidden="true"></i>
-        </div>
-        <!-- End -->
-        <div id="bouton-ai" alt="Themes for Business & Corporate Websites">
-          <i class="fa fa-briefcase" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-psd" alt="Themes for Education & Books Websites">
-          <i class="fa fa-book" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-theme" alt="Themes for Websites Selling Electronics & Gadgets">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-font" alt="Themes for Design & Photography Websites">
-          <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-photo" alt="Themes for Animals & Pets Websites">
-          <i class="fa fa-paw" aria-hidden="true"></i>
-        </div>
-        <div id="bouton-premium" alt="Themes for Art & Culture Websites">
-          <i class="fa fa-university" aria-hidden="true"></i>
-        </div>
-      </div>
+    <div class="navbar transition-ease-in-out">
+      <div id="wrapper-bouton-icon"></div>
     </div>
   </div>
-  <!-- FILTER -->
-  <div id="main-container-menu" class="object">
-    <div class="container-menu">
-      <div id="main-cross">
-        <div id="cross-menu"></div>
-      </div>
-      <div id="main-small-logo">
-        <div class="small-logo"></div>
-      </div>
-      <div id="main-premium-ressource">
-        <div class="premium-ressource">
-          <a href="#">Premium resources</a>
-        </div>
-      </div>
-      <div id="main-themes">
-        <div class="themes">
-          <a href="#">Latest themes</a>
-        </div>
-      </div>
-      <div id="main-psd">
-        <div class="psd">
-          <a href="#">PSD goodies</a>
-        </div>
-      </div>
-      <div id="main-ai">
-        <div class="ai">
-          <a href="#">Illustrator freebies</a>
-        </div>
-      </div>
-      <div id="main-font">
-        <div class="font">
-          <a href="#">Free fonts</a>
-        </div>
-      </div>
-      <div id="main-photo">
-        <div class="photo">
-          <a href="#">Free stock photos</a>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <!-- PORTFOLIO -->
   <div id="wrapper-container">
-    <div class="container object">
+    <div class="container transition-ease-in-out">
       <div id="main-container-image">
         <section id="main-container" class="work"></section>
       </div>
@@ -179,6 +69,11 @@
   <script type="text/javascript" src="lib/jquery.animate-colors-min.js"></script>
   <script type="text/javascript" src="lib/jquery.animate-shadow-min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script id="category_card" type="text/x-jsrender" charset="UTF-8">
+  <div id="category_{{:id}}" class="template_category" alt="{{:name}}">
+    <i class="{{:icon}}" aria-hidden="true"></i>
+  </div>
+  </script>
   <script id="template_card" type="text/x-jsrender" charset="UTF-8">
   {{for data}}
   <figure class="white">
