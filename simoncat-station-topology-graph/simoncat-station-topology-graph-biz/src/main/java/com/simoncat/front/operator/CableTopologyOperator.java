@@ -1,10 +1,5 @@
 package com.simoncat.front.operator;
 
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-
-import com.simoncat.framework.excel.api.ExcelOperator;
-import com.simoncat.framework.excel.api.Parameter;
 
 public class CableTopologyOperator {
 
@@ -21,8 +16,8 @@ public class CableTopologyOperator {
 
 	public void update(String fileName, String sheetName, int rowPos, String startSiteName, String endSiteName, String name, String cableType,
 			String cablePurpose, int totalCableCount, int usedCableCount, int brokenCableCount, double distance) {
-		String folderName = getClass().getClassLoader().getResource("data").getFile();
-		Parameter excelParam = new Parameter(folderName, fileName);
+		// String folderName = getClass().getClassLoader().getResource("data").getFile();
+		// Parameter excelParam = new Parameter(folderName, fileName);
 		// ExcelOperator operator = new ExcelOperatorImpl();
 		// operator.update(excelParam, document -> {
 		// Sheet sheet = document.getSheet(sheetName);
@@ -40,8 +35,8 @@ public class CableTopologyOperator {
 	}
 
 	public void delete(String fileName, String sheetName, int rowPos) {
-		String folderName = getClass().getClassLoader().getResource("data").getFile();
-		Parameter excelParam = new Parameter(folderName, fileName);
+		// String folderName = getClass().getClassLoader().getResource("data").getFile();
+		// Parameter excelParam = new Parameter(folderName, fileName);
 		// ExcelOperator operator = new ExcelOperatorImpl();
 		// operator.update(excelParam, document -> {
 		// Sheet sheet = document.getSheet(sheetName);

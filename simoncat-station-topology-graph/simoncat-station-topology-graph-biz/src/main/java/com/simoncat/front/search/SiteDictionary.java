@@ -5,17 +5,17 @@ import java.util.Map;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.simoncat.front.model.Site;
+import com.simoncat.front.station.StationDto;
 
 public class SiteDictionary {
 
-	private Map<String, Site> siteNamesMap = Maps.newConcurrentMap();
-	
+	private Map<String, StationDto> siteNamesMap = Maps.newConcurrentMap();
+
 	public List<String> fuzzySearch(String keywords) {
 		return Lists.newArrayList();
 	}
-	
-	public void add(Site newSite) {
+
+	public void add(StationDto newSite) {
 		siteNamesMap.putIfAbsent(newSite.getName(), newSite);
 	}
 }

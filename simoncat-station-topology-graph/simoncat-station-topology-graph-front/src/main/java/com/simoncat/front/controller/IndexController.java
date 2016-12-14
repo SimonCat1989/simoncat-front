@@ -20,7 +20,6 @@ import com.google.common.collect.Maps;
 import com.simoncat.framework.graph.elements.Graph;
 import com.simoncat.front.connection.ConnectionDto;
 import com.simoncat.front.graph.StationTopologyGraphManager;
-import com.simoncat.front.operator.CableTopologyOperator;
 import com.simoncat.front.pathfinder.StationTopologyPathFinder;
 import com.simoncat.front.station.StationDto;
 import com.simoncat.front.stationLocation.StationLocationManager;
@@ -31,7 +30,7 @@ public class IndexController {
 	@Autowired
 	private StationTopologyGraphManager stationTopologyGraphManager;
 
-	private CableTopologyOperator cableTopologyOperator = new CableTopologyOperator();
+	// private CableTopologyOperator cableTopologyOperator = new CableTopologyOperator();
 
 	@Autowired
 	private StationTopologyPathFinder stationTopologyPathFinder;
@@ -63,8 +62,8 @@ public class IndexController {
 			@RequestParam("sheetName") String sheetName, @RequestParam("rowPos") int rowPos, @RequestParam("startSiteName") String startSiteName,
 			@RequestParam("nextSiteName") String nextSiteName) {
 		// Do save
-		cableTopologyOperator.update(fileName, sheetName, rowPos, startSiteName, nextSiteName, routeName, cableTypeName, cablePurpose,
-				cableCountTotal, cableCountUsed, cableCountBroken, distance);
+		// cableTopologyOperator.update(fileName, sheetName, rowPos, startSiteName, nextSiteName, routeName, cableTypeName, cablePurpose,
+		// cableCountTotal, cableCountUsed, cableCountBroken, distance);
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 		modelMap.put("data", "succ");
 		return modelMap;
@@ -75,7 +74,7 @@ public class IndexController {
 	public Map<String, Object> removeSiteRelatedRoute(@RequestParam("fileName") String fileName, @RequestParam("sheetName") String sheetName,
 			@RequestParam("rowPos") int rowPos) {
 		// Do save
-		cableTopologyOperator.delete(fileName, sheetName, rowPos);
+		// cableTopologyOperator.delete(fileName, sheetName, rowPos);
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 		modelMap.put("data", "succ");
 		return modelMap;
