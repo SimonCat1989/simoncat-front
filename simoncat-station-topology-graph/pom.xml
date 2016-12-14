@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.simoncat.front</groupId>
+  <artifactId>simoncat-station-topology-graph-integration</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>simoncat-station-topology-graph-integration</name>
+
+  <modules>
+    <module>simoncat-station-topology-graph-dto</module>
+    <module>simoncat-station-topology-graph-biz</module>
+    <module>simoncat-station-topology-graph-front</module>
+  </modules>
+</project>

@@ -1,0 +1,216 @@
+@CHARSET "UTF-8";
+
+.route_content_box {
+	margin-left: 3px;
+	width: 319px;
+	height: -moz-calc(100% - 96px);
+	height: -webkit-calc(100% - 96px);
+	height: calc(100% - 96px);
+	overflow: hidden;
+	position: relative;
+	margin-top: 5px;
+}
+
+.route_content_box .special {
+	padding: 0 2px;
+}
+
+.route_list {
+	clear: both;
+	list-style: none;
+}
+
+.route {
+	background: #FFFFFF;
+	margin-bottom: 6px;
+	position: relative;
+}
+
+.route_card_head {
+	background: #FFFFFF;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.route_card_head.disuse {
+	background: #CCCCCC;
+    cursor: default;
+}
+
+.route .route_card_head:hover {
+	background: #EBF1FB;
+}
+
+.route.active .route_card_head {
+	background: #EBF1FB;
+}
+
+.route_card {
+	border: 1px solid #e4e6e7;
+}
+
+.route_scheme_name {
+	padding: 5px 0 0 14px;
+	font-size: 14px;
+	color: #36c;
+	margin: 5px 0;
+	width: 280px;
+}
+
+.route_scheme_tag {
+	background: #67C395;
+}
+
+.route_scheme_tag font {
+	padding: 0 3px;
+}
+
+.route_card_head_info {
+	font-size: 12px;
+	font-weight: 400;
+	color: #666;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.route_card_head_info.head {
+	margin-left: 14px;
+}
+
+.busitemdelimiter {
+	padding: 0 3px;
+	color: #ddd;
+}
+
+.route_card_content {
+	color: #666;
+	display: none;
+	cursor: pointer;
+	border-top: 1px solid #e4e6e7;
+}
+
+.route_card_content.active {
+	display: block;
+}
+
+.route_start_site {
+	height: 26px;
+	font-size: 12px;
+	color: #fff;
+	padding: 10px 6px 0 30px;
+	line-height: 26px;
+	background: url(../images/circle_green.png) no-repeat 16px 13px;
+	margin: 0;
+}
+
+.route_start_site span {
+	float: left;
+	height: 19px;
+	display: block;
+	line-height: 19px;
+	margin: 0 8px auto;
+	color: #333;
+}
+
+.route_passed_site {
+	width: 100%;
+	border: 0;
+}
+
+.route_passed_site tr {
+	cursor: pointer;
+}
+
+.route_passed_site tr th {
+	padding: 0;
+	line-height: 20px;
+	text-align: left;
+	vertical-align: top;
+	margin: 0;
+}
+
+.cable_info_icon {
+	width: 29px;
+	height: 31px;
+	background: url(../images/route_link.png) no-repeat 6px 0;
+	float: left;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.route_passed_site tr td {
+	padding: 5px 6px 5px 10px;
+	line-height: 20px;
+	vertical-align: top;
+	width: 100%;
+	position: relative;
+	border-top: 1px solid #f2f5f8;
+}
+
+.cable_info {
+	color: #666;
+	height: 25px;
+	line-height: 25px;
+}
+
+.cable_info_name {
+	color: #999;
+	text-decoration: none;
+}
+
+.route_destination_site {
+	background: url(../images/circle_orange.png) no-repeat 16px 19px;
+	height: 26px;
+	font-size: 12px;
+	color: #fff;
+	padding: 10px 6px 0 30px;
+	line-height: 26px;
+	margin: 0;
+}
+
+.route_destination_site_wrap {
+	width: 100%;
+	border-top: 1px solid #f2f5f8;
+	padding-top: 5px;
+}
+
+.route_destination_site span {
+	float: left;
+	height: 19px;
+	display: block;
+	line-height: 19px;
+	margin: 0 8px auto;
+	color: #333;
+}
+
+.site_related_route_in_route_scheme_name {
+	padding: 5px 0 0 14px;
+	font-size: 14px;
+	color: #36c;
+	margin: 5px 0;
+	width: 251px;
+}
+
+.site_related_route_in_route_info_item {
+	float: left;
+	width: 60px;
+	font-size: 12px;
+	font-weight: 400;
+	color: #666;
+}
+
+.route_card_wrapper_container {
+	border: 1px solid #EBF1FB;
+}
+
+.site_related_route_info_detail .row {
+	margin-top: 2px;
+}
+
+.site_related_route_card_head_head {
+	background: #EBF1FB;
+	overflow: hidden;
+}

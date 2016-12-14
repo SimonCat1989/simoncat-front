@@ -1,0 +1,204 @@
+@CHARSET "UTF-8";
+
+.site_search_key {
+	margin-top: 10px;
+}
+
+.site_card_head {
+	background: #EBF1FB;
+	overflow: hidden;
+	margin: 0 5px;
+	border: 1px solid #e4e6e7;
+	padding: 6px 5px;
+}
+
+.site_card_icon {
+	width: 25px;
+	float: left;
+}
+
+.site_scheme_name {
+	margin-top: 1px;
+	float: left;
+	font-size: 16px;
+	margin-left: 5px;
+}
+
+.site_scheme_tag {
+	margin-top: 3px;
+	background: #67C395;
+	float: right;
+}
+
+.site_scheme_tag .text {
+	color: #FFFFFF;
+	padding: 0 3px;
+	font-size: 10px;
+}
+
+.site_scheme_tag .value {
+	color: #FFFFFF;
+	padding: 0 3px;
+}
+
+.site_search_box {
+	
+}
+
+.site_search_form {
+	font-size: 13px;
+	border-bottom: 1px solid #dee1e3;
+	position: relative;
+	margin-left: 5px;
+}
+
+.site_input_box {
+	display: inline-block;
+	vertical-align: middle;
+	width: 211px;
+	position: relative;
+}
+
+.site_input {
+	position: relative;
+}
+
+.site_input i {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	position: relative;
+	top: 3px;
+}
+
+.start i {
+	background: url(../images/circle_green.png) no-repeat;
+}
+
+.site_input input {
+	width: 186px;
+	height: 30px;
+	line-height: 26px;
+	display: inline-block;
+	border: 0;
+	border-bottom: 1px solid #eaebed;
+	font-size: 13px;
+	color: #333;
+	padding: 5px 0 5px 5px;
+	vertical-align: middle;
+	outline: 0;
+}
+
+.site_submit {
+	background: #F5F7FA;
+	border: 1px solid #f2f2f2;
+	text-align: center;
+	cursor: pointer;
+	font-size: 13px;
+	color: #999;
+	position: absolute;
+	top: 1px;
+	bottom: 1px;
+	right: 1px;
+	width: 54px;
+}
+
+.site_content_box {
+	margin-top: 10px;
+	margin-left: 3px;
+	width: 319px;
+	height: -moz-calc(100% - 94px);
+	height: -webkit-calc(100% - 94px);
+	height: calc(100% - 94px);
+	overflow: hidden;
+}
+
+.site_content_box .special {
+	padding: 0 2px;
+}
+
+.site_content_box .overview {
+	width: 100%;
+}
+
+.site_related_route_list {
+	clear: both;
+	list-style: none;
+}
+
+.site_related_route {
+	background: #FFFFFF;
+	margin-bottom: 6px;
+	position: relative;
+}
+
+.site_related_route_card_head {
+	background: #FFFFFF;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.site_related_route_card_head:hover {
+	background: #EBF1FB;
+}
+
+.site_related_route.active .site_related_route_card_head {
+	background: #EBF1FB;
+}
+
+.site_related_route_card {
+	border: 1px solid #e4e6e7;
+	padding-bottom: 2px;
+}
+
+.site_related_route_scheme_name {
+	padding: 5px 0 0 14px;
+	font-size: 14px;
+	color: #36c;
+	margin: 5px 0;
+	width: 280px;
+}
+
+.site_related_route_card_head_info {
+	font-size: 12px;
+	font-weight: 400;
+	color: #666;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.site_related_route_card_head_info.head {
+	margin-left: 14px;
+}
+
+.site_related_route_card_content {
+	color: #666;
+	display: none;
+	cursor: pointer;
+	border-top: 1px solid #e4e6e7;
+}
+
+.site_related_route_card_content.active {
+	display: block;
+}
+
+.site_related_route_info_detail {
+	padding-left: 11px;
+	width: 100%;
+}
+
+.site_related_route_info_detail tbody tr td {
+	width: 25%;
+}
+
+.site_related_route_info_item {
+	font-size: 12px;
+	font-weight: 400;
+	color: #666;
+}
+
+.site_related_route_card_tool {
+	position: absolute;
+	right: 15px;
+	top: 3px;
+}

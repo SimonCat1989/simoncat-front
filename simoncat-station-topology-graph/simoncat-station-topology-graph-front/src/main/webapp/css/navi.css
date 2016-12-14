@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+.navi {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	background-color: rgb(0, 106, 106);
+}
+
+.logo {
+	display: inline;
+	float: left;
+}
+
+.logo img {
+	vertical-align: middle;
+	height: 70px;
+}
+
+.user {
+	display: inline;
+	float: right;
+	margin-top: 10px;
+	margin-right: 16px;
+}
+
+.user img {
+	vertical-align: middle;
+	height: 50px;
+	float: left;
+}
+
+.user_info {
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.user_name {
+	color: rgb(250, 255, 255);
+	font-size: 16px;
+}
+
+.user_office {
+	color: rgb(250, 255, 255);
+	font-size: 12px;
+	margin-top: 5px;
+}

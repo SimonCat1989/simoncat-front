@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+.route_sort_box {
+	padding: 10px 5px;
+}
+
+.route_sort_box table {
+	color: #666;
+	font-weight: 400;
+	border-collapse: collapse;
+	background: #fff;
+	width: 100%;
+	border: 0;
+}
+
+.route_sort_item {
+	cursor: pointer;
+	width: 70px;
+	height: 17px;
+	line-height: 17px;
+	padding: 6px 0;
+	text-align: center;
+	border: 1px solid #e4e6e7;
+	font-size: 12px;
+}
+
+.route_sort_item.long_word {
+	width: 90px;
+}
+
+.route_sort_item.selected {
+	background: #f5f7f7;
+}

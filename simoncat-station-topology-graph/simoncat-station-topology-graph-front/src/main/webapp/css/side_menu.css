@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+
+.menu_item {
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.menu_item:hover {
+	background: white;
+}
+
+.menu_item:hover span {
+	color: #999;
+}
+
+.menu_item.selected {
+	background: white;
+}
+
+.menu_item.selected span {
+	color: #999;
+}
+
+.menu_item_link {
+	display: inline-block;
+	text-align: center;
+	width: 56px;
+	height: 60px;
+	text-decoration: none;
+	zoom: 1;
+}
+
+.menu_item_icon {
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 12px auto 5px;
+}
+
+.menu_item span {
+	color: #fff;
+	display: block;
+	font-size: 13px;
+	text-align: center;
+	zoom: 1;
+}

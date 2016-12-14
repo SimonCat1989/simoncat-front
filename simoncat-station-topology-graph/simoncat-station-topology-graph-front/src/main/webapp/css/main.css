@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+.side_menu {
+	position: absolute;
+	left: 0;
+	top: 70px;
+	bottom: 0px;
+	width: 56px;
+	top: 70px;
+	background: #000000;
+}
+
+.main {
+	position: absolute;
+	left: 56px;
+	right: 0;
+	top: 70px;
+	bottom: 0px;
+	width: -moz-calc(100% - 56px);
+	width: -webkit-calc(100% - 56px);
+	width: calc(100% - 56px);
+	top: 70px;
+}
+
+.site_container {
+	float: left;
+	width: 325px;
+	min-width: 325px;
+	height: 100%;
+	margin-right: -2px;
+	border-right: rgb(0, 106, 106) 2px solid;
+	height: 100%;
+}
+
+.search_container {
+	float: left;
+	width: 325px;
+	min-width: 325px;
+	height: 100%;
+	margin-right: -2px;
+	border-right: rgb(0, 106, 106) 2px solid;
+	height: 100%;
+}
+
+.map_container {
+	float: left;
+	width: -moz-calc(100% - 325px);
+	width: -webkit-calc(100% - 325px);
+	width: calc(100% - 325px);
+	height: 100%;
+}

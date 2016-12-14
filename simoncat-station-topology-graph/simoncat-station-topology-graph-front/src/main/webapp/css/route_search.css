@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+
+.search_form {
+	font-size: 13px;
+	border-bottom: 1px solid #dee1e3;
+	position: relative;
+}
+
+.route_switch {
+	display: inline-block;
+	vertical-align: middle;
+	width: 48px;
+	text-align: center;
+}
+
+.route_switch a {
+	display: block;
+	text-decoration: none;
+	width: 25px;
+	height: 25px;
+	background: url(../images/switch.png) no-repeat;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+.route_input_box {
+	display: inline-block;
+	vertical-align: middle;
+	width: 211px;
+	position: relative;
+}
+
+.route_input {
+	position: relative;
+}
+
+.route_input input {
+	width: 186px;
+	height: 30px;
+	line-height: 26px;
+	display: inline-block;
+	border: 0;
+	border-bottom: 1px solid #eaebed;
+	font-size: 13px;
+	color: #333;
+	padding: 5px 0 5px 5px;
+	vertical-align: middle;
+	outline: 0;
+}
+
+.route_input i {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	position: relative;
+	top: 3px;
+}
+
+.start i {
+	background: url(../images/circle_green.png) no-repeat;
+}
+
+.end i {
+	background: url(../images/circle_orange.png) no-repeat;
+}
+
+.route_submit {
+	background: #F5F7FA;
+	border: 1px solid #f2f2f2;
+	text-align: center;
+	cursor: pointer;
+	font-size: 13px;
+	color: #999;
+	position: absolute;
+	top: 1px;
+	bottom: 1px;
+	right: 1px;
+	width: 54px;
+}

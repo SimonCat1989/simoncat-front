@@ -146,6 +146,13 @@
             "description": "Attractive personal website template with paper layout design and pencil marks. Make people feel relax.",
             "type": "home_family",
             "usage": "Personal & Resume"
+        },
+        {
+            "id": "blueWithGoodTree",
+            "name": "BlueWithGoodTree",
+            "description": "Template for a website which want to display management view.",
+            "type": "business_corporate",
+            "usage": "Business & Dashboard"
         }
     ]
 }

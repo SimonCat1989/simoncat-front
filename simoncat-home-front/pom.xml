@@ -5,7 +5,7 @@
   <artifactId>simoncat-home-front</artifactId>
   <packaging>war</packaging>
   <version>1.0.0-SNAPSHOT</version>
-  <name>Home front page</name>
+  <name>simoncat-home-front</name>
 
   <properties>
     <skip.all.test.cases>true</skip.all.test.cases>
