@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	position: absolute;
+	background-image: url("../img/back.PNG");
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-image: url("../img/back.PNG");
+}
+
+.postion {
+	position: absolute;
+	top: 200px;
+	right: 400px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/green_mark.png);
+	background-size: contain;
+}
+
+.postion2 {
+	position: absolute;
+	top: 500px;
+	right: 300px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/blue_mark.png);
+	background-size: contain;
+}
+
+.postion3 {
+	position: absolute;
+	top: 400px;
+	right: 500px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/red_mark.png);
+	background-size: contain;
+}
+
+.postion4 {
+	position: absolute;
+	top: 470px;
+	right: 530px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/blue_mark.png);
+	background-size: contain;
+}
+
+.postion5 {
+	position: absolute;
+	top: 490px;
+	right: 330px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/red_mark.png);
+	background-size: contain;
+}
+
+.postion6 {
+	position: absolute;
+	top: 380px;
+	right: 600px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/blue_mark.png);
+	background-size: contain;
+}
+
+.postion7 {
+	position: absolute;
+	top: 43px;
+	right: 800px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/red_mark.png);
+	background-size: contain;
+}
+
+.postion8 {
+	position: absolute;
+	top: 458px;
+	right: 360px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/blue_mark.png);
+	background-size: contain;
+}
+
+.postion9 {
+	position: absolute;
+	top: 250px;
+	right: 500px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/red_mark.png);
+	background-size: contain;
+}
+
+.postion10 {
+	position: absolute;
+	top: 321px;
+	right: 456px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/blue_mark.png);
+	background-size: contain;
+}
+
+.postion11 {
+	position: absolute;
+	top: 432px;
+	right: 567px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/red_mark.png);
+	background-size: contain;
+}
+
+.postion12 {
+	position: absolute;
+	top: 543px;
+	right: 678px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/blue_mark.png);
+	background-size: contain;
+}
+
+.postion13 {
+	position: absolute;
+	top: 200px;
+	right: 600px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/red_mark.png);
+	background-size: contain;
+}
+
+.postion14 {
+	position: absolute;
+	top: 520px;
+	right: 360px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/blue_mark.png);
+	background-size: contain;
+}
+
+.postion15 {
+	position: absolute;
+	top: 330px;
+	right: 800px;
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/red_mark.png);
+	background-size: contain;
+}
