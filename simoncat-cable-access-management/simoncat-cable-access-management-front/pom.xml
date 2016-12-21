@@ -1,20 +1,39 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.simoncat.front</groupId>
+
+  <parent>
+    <groupId>com.simoncat.front</groupId>
+    <artifactId>simoncat-front-build-base</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath />
+  </parent>
+
   <artifactId>simoncat-cable-access-management-front</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>simoncat-cable-access-management-front Maven Webapp</name>
+  <name>simoncat-cable-access-management-front</name>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <build>
-    <finalName>simoncat-cable-access-management-front</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>2.10</version>
+        <configuration>
+          <workspace>./</workspace>
+          <downloadSources>true</downloadSources>
+          <downloadJavadocs>true</downloadJavadocs>
+          <wtpversion>2.0</wtpversion>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
