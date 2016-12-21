@@ -9,6 +9,7 @@
 
   <modules>
     <module>simoncat-station-topology-graph</module>
+    <module>simoncat-cable-access-management</module>
     <module>simoncat-home-front</module>
     <module>simoncat-template-front</module>
   </modules>
