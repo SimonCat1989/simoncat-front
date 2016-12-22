@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.7/css/bootstrap.min.css"></link>
 <link rel="stylesheet" type="text/css" href="css/left_side_menu.css"></link>
+<link rel="stylesheet" type="text/css" href="css/work_sheets.css"></link>
 <link rel="stylesheet" type="text/css" href="css/main.css"></link>
 </head>
 <body>
@@ -17,8 +18,8 @@
     <!-- Sidebar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
       <ul class="nav sidebar-nav">
-        <li class="sidebar-brand"><a href="#"> Bootstrap 3 </a></li>
-        <li><a href="#"> <i class="fa fa-fw fa-home"></i> Home
+        <li class="sidebar-brand"><a href="#"> 国家电网光纤管理 </a></li>
+        <li><a href="#"> <i class="fa fa-fw fa-home"></i> 工作单管理
         </a></li>
         <li><a href="#"> <i class="fa fa-fw fa-folder"></i> Page one
         </a></li>
@@ -52,8 +53,18 @@
         <span class="hamb-top"></span> <span class="hamb-middle"></span> <span class="hamb-bottom"></span>
       </button>
       <div class="container">
-        <div class="row">
-          
+        <div id="work_tickets" class="row">
+          <ul class="work_tickets_ul">
+            <li class="work_tickets_li"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i>工作中</a></li>
+            <li class="work_tickets_li">已完成</li>
+            <li class="work_tickets_li">Tab Three</li>
+            <li class="work_tickets_slider"></li>
+          </ul>
+          <div class="work_tickets_content">
+            <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+              <p>zhezhezhe</p>
+            </div>
+          </div>
         </div>
       </div>
       <!-- /#page-content-wrapper -->
