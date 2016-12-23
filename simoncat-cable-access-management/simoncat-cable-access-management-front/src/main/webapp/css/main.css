@@ -1,16 +1,23 @@
-@import "../lib/flat-ui/css/flat-ui.min.css";
-@import "../lib/font-awesome-4.7.0/css/font-awesome.min.css";
-@import "../lib/animate/animate.css";
+body {
+  background-color: #f1f1f1;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
 /*-------------------------------*/
 /*           VARIABLES           */
 /*-------------------------------*/
-.nav .open > a {
+.nav .open>a {
   background-color: transparent;
 }
-.nav .open > a:hover {
+
+.nav .open>a:hover {
   background-color: transparent;
 }
-.nav .open > a:focus {
+
+.nav .open>a:focus {
   background-color: transparent;
 }
 /*-------------------------------*/
@@ -23,12 +30,15 @@
   padding-left: 0;
   transition: all 0.5s ease;
 }
+
 #wrapper.toggled {
   padding-left: 220px;
 }
+
 #wrapper.toggled #sidebar-wrapper {
   width: 220px;
 }
+
 #wrapper.toggled #page-content-wrapper {
   margin-right: -220px;
   position: absolute;

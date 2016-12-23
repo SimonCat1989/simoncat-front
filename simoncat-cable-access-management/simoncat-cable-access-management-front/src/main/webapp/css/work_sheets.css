@@ -1,69 +1,273 @@
+#work_tickets_tab {
+  width: 120px;
+  float: left;
+  background-color: #111;
+}
+
 .work_tickets_ul {
-  font-size: 0;
   position: relative;
+  height: 100%;
+  margin: 0;
   padding: 0;
-  width: 480px;
-  margin: 40px auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .work_tickets_li {
-  display: inline-block;
-  width: 160px;
-  height: 60px;
-  background: #DA4453;
-  font-size: 16px;
   text-align: center;
-  line-height: 60px;
-  color: #fff;
-  text-transform: uppercase;
+  padding: 0x 0px;
+  list-style-type: none;
+  margin: 0;
   position: relative;
+  color: #B3B3B3;
+}
+
+.work_tickets_a {
+  text-decoration: none;
+  color: #B3B3B3;
+  box-sizing: border-box;
+  display: block;
+  text-transform: capitalize;
+  padding: 20px;
+}
+
+.work_tickets_icon {
+  display: block;
+  text-align: center;
+  color: #B3B3B3;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.work_tickets_li:hover .work_tickets_a, .work_tickets_li#active {
+  background-color: #313131;
+}
+
+.work_tickets_li:hover .work_tickets_a, .work_tickets_li#active .work_tickets_icon
+  {
+  color: #17BCE8;
+}
+
+.work_tickets_li#focus .work_tickets_icon {
+  color: #17BCE8;
+}
+
+.work_tickets_content {
+  float: left;
+  width: calc(100% - 120px);
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.work_tickets_content h2 {
+  margin: 1em 30px;
+  color: #17BCE8;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #bbb;
+  padding: 0px 0px 12px 0px;
+}
+
+.work_tickets_grid_container_ul {
+  -moz-column-count: 3;
+  -moz-column-gap: 50px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 50px;
+  column-count: 3;
+  column-gap: 50px;
+}
+
+.work_tickets_grid_container_li {
   overflow: hidden;
+}
+
+.work_tickets_card {
+  margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #eee;
+  text-align: center;
+  padding-top: 30px;
+  float: left;
+}
+
+.work_tickets_card:before {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  left: 50%;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+}
+
+.work_tickets_card_title {
+  margin: 20px 0 20px;
+  font-size: 150%;
+}
+
+.work_tickets_card_separator {
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+
+.work_tickets_card_plug {
+  border-top: 4px solid #16a085;
+}
+
+.work_tickets_card_plug:before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: url("../images/plug.png") no-repeat 12px 10px;
+  background-size: 64%;
+  background-color: #eee;
+}
+
+.work_tickets_card_plug .work_tickets_card_separator {
+  border: 1px solid #16a085;
+}
+
+.work_tickets_card_unplug {
+  border-top: 4px solid #e74c3c;
+}
+
+.work_tickets_card_unplug:before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: url("../images/unplug.png") no-repeat 12px 10px;
+  background-size: 64%;
+  background-color: #eee;
+}
+
+.work_tickets_card_unplug .work_tickets_card_separator {
+  border: 1px solid #e74c3c;
+}
+
+.work_tickets_float_menu {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 10;
+  right: 70px;
+  bottom: 70px;
+}
+
+.work_tickets_float_menu div {
+  -webkit-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.work_tickets_float_menu_plus {
+  width: 100%;
+  height: 100%;
+  background: url(../images/menu-icon.png) no-repeat center center;
+  background-size: 100%;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.work_tickets_float_menu_cross {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  content: "";
+  background: url(../images/menu-add.png) no-repeat center center;
+  background-size: 37%;
   cursor: pointer;
 }
 
-.work_tickets_slider {
+.work_tickets_float_menu_list {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+}
+
+.work_tickets_float_menu_list a {
+  width: 33%;
+  height: 30%;
   display: block;
   position: absolute;
+  text-align: center;
+  padding-top: 17%;
+  opacity: 0;
+  font-size: 0;
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.work_tickets_float_menu_list a span:hover {
+  font-size: 15px;
+  color: #111;
+}
+
+.work_tickets_float_menu_list a.link-home {
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background: url(../images/icon_home.png) no-repeat center 5px;
+  background-size: 50%;
+}
+
+.work_tickets_float_menu_list a.link-my {
+  left: 0%;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  background: url(../images/icon_me.png) no-repeat center top;
+  background-size: 50%;
+}
+
+.work_tickets_float_menu_list a.link-cart {
+  left: 50%;
   bottom: 0;
-  left: 0;
-  height: 4px;
-  background: #46CFB0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background: url(../images/icon_cart.png) no-repeat center top;
+  background-size: 50%;
 }
 
-/*  Ripple */
-.ripple {
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  position: absolute;
+.work_tickets_float_menu.open .work_tickets_float_menu_list a {
   opacity: 1;
+  font-size: 13px;
 }
 
-.rippleEffect {
-  -webkit-animation: rippleDrop .6s linear;
-  animation: rippleDrop .6s linear;
+.work_tickets_float_menu.open .work_tickets_float_menu_cross {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  border-radius: 100%;
 }
 
-@-webkit-keyframes rippleDrop { 100% {
-  -webkit-transform: scale(2);
-  transform: scale(2);
-  opacity: 0;
-}
-}
-
-@keyframes rippleDrop { 100% {
-  -webkit-transform: scale(2);
-  transform: scale(2);
-  opacity: 0;
-}
+.work_tickets_float_menu.open .work_tickets_float_menu_list {
+  opacity: 1;
+  width: 300%;
+  height: 300%;
+  left: -100%;
+  top: -100%;
+  background-color: rgba(255, 232, 78, .7);
 }

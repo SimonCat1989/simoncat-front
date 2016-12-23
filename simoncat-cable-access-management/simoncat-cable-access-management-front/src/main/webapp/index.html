@@ -7,6 +7,9 @@
 <title>光纤资源管理系统</title>
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.7/css/bootstrap.min.css"></link>
+<link rel="stylesheet" type="text/css" href="lib/flat-ui/css/flat-ui.min.css"></link>
+<link rel="stylesheet" type="text/css" href="lib/font-awesome-4.7.0/css/font-awesome.min.css"></link>
+<link rel="stylesheet" type="text/css" href="lib/animate/animate.css"></link>
 <link rel="stylesheet" type="text/css" href="css/left_side_menu.css"></link>
 <link rel="stylesheet" type="text/css" href="css/work_sheets.css"></link>
 <link rel="stylesheet" type="text/css" href="css/main.css"></link>
@@ -54,26 +57,70 @@
       </button>
       <div class="container">
         <div id="work_tickets" class="row">
-          <ul class="work_tickets_ul">
-            <li class="work_tickets_li"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i>工作中</a></li>
-            <li class="work_tickets_li">已完成</li>
-            <li class="work_tickets_li">Tab Three</li>
-            <li class="work_tickets_slider"></li>
-          </ul>
+          <div id="work_tickets_tab">
+            <ul class="work_tickets_ul">
+              <li class="work_tickets_li"><a href="" class="work_tickets_a" name="work_tickets_pending"><i class="work_tickets_icon fa fa-tachometer"></i>审核中</a></li>
+              <li class="work_tickets_li"><a href="" class="work_tickets_a" name="work_tickets_working"><i class="work_tickets_icon fa fa-eyedropper"></i>工作中</a></li>
+              <li class="work_tickets_li"><a href="" class="work_tickets_a" name="work_tickets_submitting"><i class="work_tickets_icon fa fa-pencil"></i>待提交</a></li>
+              <li class="work_tickets_li"><a href="" class="work_tickets_a" name="work_tickets_submitted"><i class="work_tickets_icon fa fa-picture-o"></i>已完成</a></li>
+            </ul>
+          </div>
           <div class="work_tickets_content">
-            <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-              <p>zhezhezhe</p>
+            <div id="work_tickets_pending" class="work_tickets_container">
+              <h2 class="header">审核中</h2>
+              <div class="work_tickets_grid_container">
+                <ul class="work_tickets_grid_container_ul">
+                  <li class="work_tickets_grid_container_li">
+                    <div class="work_tickets_card work_tickets_card_plug col-md-12">
+                      <p class="work_tickets_card_title">how old was the oldest person ever?</p>
+                      <div class="work_tickets_card_separator"></div>
+                      <p style="text-align: justify;">
+                        The oldest verified person on record was French woman <b>Jeanne Calment</b> (1875–1997), who lived to the age of <b>122 years, 164 days.</b>
+                      </p>
+                      <div class="work_tickets_card_separator"></div>
+                    </div>
+                  </li>
+                  <li class="work_tickets_grid_container_li">
+                    <div class="work_tickets_card work_tickets_card_unplug col-md-12">
+                      <p class="work_tickets_card_title">how old was the oldest person ever?</p>
+                      <div class="work_tickets_card_separator"></div>
+                      <p style="text-align: justify;">
+                        The oldest verified person on record was French woman <b>Jeanne Calment</b> (1875–1997), who lived to the age of <b>122 years, 164 days.</b>
+                      </p>
+                      <div class="work_tickets_card_separator"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="work_tickets_working" class="work_tickets_container">
+              <h2 class="header">工作中</h2>
+            </div>
+            <div id="work_tickets_submitting" class="work_tickets_container">
+              <h2 class="header">待提交</h2>
+            </div>
+            <div id="work_tickets_submitted" class="work_tickets_container">
+              <h2 class="header">已完成</h2>
             </div>
           </div>
         </div>
+        <div class="work_tickets_float_menu">
+          <div class="work_tickets_float_menu_plus">
+            <div class="work_tickets_float_menu_cross"></div>
+          </div>
+          <div class="work_tickets_float_menu_list">
+            <a href="" class="link-home"><span>接入单</span></a> <a href="" class="link-my"><span>退出单</span></a> <a href="" class="link-cart"><span>更多</span></a>
+          </div>
+        </div>
       </div>
-      <!-- /#page-content-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-content-wrapper -->
 
-    <script src="lib/jquery-3.1.1/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script src="lib/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/main.js"></script>
+  </div>
+  <!-- /#wrapper -->
+
+  <script src="lib/jquery-3.1.1/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script src="lib/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
