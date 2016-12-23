@@ -66,21 +66,13 @@
   padding: 0px 0px 12px 0px;
 }
 
-.work_tickets_grid_container_ul {
-  -moz-column-count: 3;
-  -moz-column-gap: 50px;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 50px;
-  column-count: 3;
-  column-gap: 50px;
-}
-
-.work_tickets_grid_container_li {
-  overflow: hidden;
+.work_tickets_grid_container {
+  padding: 0px 20px 0px 30px;
 }
 
 .work_tickets_card {
-  margin-top: 50px;
+  width: calc(33.3% - 10px);
+  margin: 24px 10px 24px 0px;
   font-family: 'Roboto', sans-serif;
   color: #444;
   border: 1px solid #999;
