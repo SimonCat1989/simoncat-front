@@ -1,5 +1,5 @@
 #work_tickets_tab {
-  width: 120px;
+  width: 84px;
   float: left;
   background-color: #111;
 }
@@ -52,7 +52,7 @@
 
 .work_tickets_content {
   float: left;
-  width: calc(100% - 120px);
+  width: calc(100% - 84px);
   background-color: rgb(255, 255, 255);
   position: relative;
 }
@@ -70,17 +70,20 @@
   padding: 0px 20px 0px 30px;
 }
 
+.work_tickets_grid_container_row {
+  clear: both;
+  display: inline-block;
+}
+
 .work_tickets_card {
-  width: calc(33.3% - 10px);
+  width: calc(50% - 10px);
   margin: 24px 10px 24px 0px;
-  font-family: 'Roboto', sans-serif;
   color: #444;
   border: 1px solid #999;
   border-radius: 4px;
   background: #eee;
-  text-align: center;
-  padding-top: 30px;
   float: left;
+  padding: 30px 10px 12px 10px;
 }
 
 .work_tickets_card:before {
@@ -95,13 +98,41 @@
 }
 
 .work_tickets_card_title {
-  margin: 20px 0 20px;
-  font-size: 150%;
+  margin: 5px 0 5px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.work_tickets_card_subtitle {
+  display: inline-block;
+  width: 100%;
+}
+
+.work_tickets_card_subtitle img {
+  width: 22px;
+  margin-left: 2px;
+}
+
+.work_tickets_card_subtitle_id {
+  color: #17BCE8;
+  font-size: 14px;
+  float: left;
+  font-weight: bold;
+}
+
+.work_tickets_card_subtitle_time {
+  color: #17BCE8;
+  font-size: 14px;
+  float: right;
+}
+
+.work_tickets_card_subtitle_time_value {
+  font-weight: bold;
 }
 
 .work_tickets_card_separator {
   width: 100%;
-  margin: 10px 0 10px 0;
+  margin: -2px 0 10px 0;
 }
 
 .work_tickets_card_plug {
@@ -136,6 +167,75 @@
 
 .work_tickets_card_unplug .work_tickets_card_separator {
   border: 1px solid #e74c3c;
+}
+
+.work_tickets_card_station_container {
+  
+}
+
+.work_tickets_card_station_container_row {
+  clear: both;
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.work_tickets_card_station_wrap {
+  position: relative;
+  width: 86px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 0 #ddb, 2px 4px 6px #dde;
+  transition: all 150ms linear;
+  border-radius: 12px;
+  float: left;
+  text-align: center;
+}
+
+.work_tickets_card_station_wrap.first {
+  margin-left: 8px;
+}
+
+.work_tickets_card_station_wrap span {
+  font-size: xx-small;
+  margin: 0px 4px;
+  display: block;
+}
+
+.work_tickets_card_station_img {
+  display: block;
+  width: 48px;
+  margin: 0px 18px;
+}
+
+.work_tickets_card_station_connection_status_wrap {
+  position: relative;
+  float: left;
+  margin-top: 26px;
+  z-index: 1;
+}
+
+.work_tickets_card_station_connection_status_wrap.right {
+  margin-left: -10px;
+}
+
+.work_tickets_card_station_connection_status_wrap.left {
+  margin-right: -10px;
+}
+
+.work_tickets_card_station_connection_status {
+  width: 18px;
+}
+
+.work_tickets_card_station_connection_wrap {
+  position: relative;
+  float: left;
+  margin-top: 26px;
+}
+
+.work_tickets_card_station_connection {
+  width: 18px;
+  margin: 0px 1px;
 }
 
 .work_tickets_float_menu {
