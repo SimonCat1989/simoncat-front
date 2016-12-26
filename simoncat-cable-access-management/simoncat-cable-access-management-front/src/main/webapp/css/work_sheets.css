@@ -83,7 +83,7 @@
   border-radius: 4px;
   background: #eee;
   float: left;
-  padding: 30px 10px 12px 10px;
+  padding: 30px 10px 4px 10px;
 }
 
 .work_tickets_card:before {
@@ -106,6 +106,7 @@
 .work_tickets_card_subtitle {
   display: inline-block;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .work_tickets_card_subtitle img {
