@@ -63,22 +63,23 @@ function initWorkTicketsFloatMenu() {
 }
 
 function initDialog() {
-  $(".work_tickets_card").click(function(e) {
-    openDialog();
-  });
-}
-
-function openDialog() {
   $("#modal-default").iziModal({
     title : "工作票详细信息",
     headerColor : "#17BCE8",
     iconClass : "fa fa-pencil-square-o",
     width : "90%",
     padding : 20,
-    transitionInModal: 'fadeIn',
-    transitionOutModal: 'fadeOut',
+    transitionInModal : 'fadeIn',
+    transitionOutModal : 'fadeOut',
   });
-  $("#modal-default").iziModal('open', this);
+
+  $(document).on('closed', '#modal-default', function(e) {
+    $("#modal-default").addClass("work_tickets_detail");
+  });
+
+  $(".work_tickets_card").click(function(e) {
+    $("#modal-default").iziModal('open', this);
+  });
 }
 
 function fetchWorkTicketPendingData() {
