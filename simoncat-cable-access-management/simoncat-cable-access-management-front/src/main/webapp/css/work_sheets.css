@@ -6,7 +6,6 @@
 
 .work_tickets_ul {
   position: relative;
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -84,6 +83,12 @@
   background: #eee;
   float: left;
   padding: 30px 10px 4px 10px;
+  cursor: pointer;
+}
+
+.work_tickets_card:hover {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px
+    rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
 }
 
 .work_tickets_card:before {
@@ -237,6 +242,89 @@
 .work_tickets_card_station_connection {
   width: 18px;
   margin: 0px 1px;
+}
+
+.work_tickets_detail {
+  height: 90%;
+}
+
+.work_tickets_detail_row {
+  clear: both;
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+.work_tickets_detail_wide {
+  float: left;
+  width: 70%;
+  padding-right: 5px;
+}
+
+.work_tickets_detail_narrow {
+  float: left;
+  width: 30%;
+  padding-left: 5px;
+}
+
+.work_tickets_detail_normal {
+  float: left;
+  width: 25%;
+  padding: 0px 5px;
+}
+
+.work_tickets_detail_normal.first {
+  padding-left: 0px;
+}
+
+.work_tickets_detail_normal.last {
+  padding-right: 0px;
+}
+
+.work_tickets_detail_separator {
+  width: 100%;
+  border: 1px solid #88a0b9;
+}
+
+.work_tickets_detail_stations_list {
+  float: left;
+  width: calc(30% - 10px);
+  margin: 10px 10px 10px 0px;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  height: calc(100% - 190px);
+  overflow-y: auto;
+}
+
+.work_tickets_detail_station_li {
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin: 5px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(90deg, #FFD32E 10px, #EEE 10px, #EEE 11px, transparent
+    11px);
+  padding: 10px 15px 10px 25px;
+  border: 1px solid #CCC;
+}
+
+.work_tickets_detail_station_card_img {
+  width: 28px;
+}
+
+.work_tickets_detail_station_connection_status {
+  width: 28px;
+}
+
+.work_tickets_detail_stations_map {
+  float: left;
+  width: 70%;
+  margin: 10px 0px;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  height: calc(100% - 190px);
+  overflow: hidden;
+  background-image: url("../img/back.PNG");
 }
 
 .work_tickets_float_menu {
