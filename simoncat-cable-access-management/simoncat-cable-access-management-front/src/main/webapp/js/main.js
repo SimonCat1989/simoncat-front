@@ -61,7 +61,7 @@ function initWorkTicketsTabs() {
 
 function initWorkTicketsContents() {
   var workTicketCardTemplate = $.templates("#work_sheet_card_template");
-  $("#work_tickets_pending_container").html(workTicketCardTemplate.render(stategrid.cableaccess.data));
+  $("#work_tickets_submitted_container").html(workTicketCardTemplate.render(stategrid.cableaccess.data));
 }
 
 function initWorkTicketsFloatMenu() {
