@@ -20,6 +20,12 @@
 <link rel="stylesheet" type="text/css" href="css/left_side_menu.css"></link>
 <link rel="stylesheet" type="text/css" href="css/work_sheets.css"></link>
 <link rel="stylesheet" type="text/css" href="css/main.css"></link>
+
+<script src="lib/jquery-3.1.1/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="lib/jsrender/jsrender.js"></script>
+<script src="lib/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="lib/iziModal/js/iziModal.min.js"></script>
+<script src="js/main.js"></script>
 </head>
 <body>
   <div id="wrapper">
@@ -104,37 +110,31 @@
     <!-- /#page-content-wrapper -->
     <div id="modal-default" class="iziModal work_tickets_detail">
       <div class="work_tickets_detail_container">
+        <div class="work_tickets_detail_group">
+          上海市电力公司话路运动<span>退出通知单</span>
+        </div>
+        <div class="work_tickets_detail_id">沪电调通第20160697号</div>
         <div class="work_tickets_detail_row">
           <div class="work_tickets_detail_wide">
             <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i>工作单名称</span> <input class="form-control" type="text" placeholder="工作单名称">
+              <span class="input-group-addon"><i class="fa fa-id-card-o fa-fw"></i>电路名称</span> <input class="form-control" type="text" placeholder="电路名称">
             </div>
           </div>
           <div class="work_tickets_detail_narrow">
             <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i>用户性质</span> <input class="form-control" type="password" placeholder="用户性质">
+              <span class="input-group-addon"><i class="fa fa-tags fa-fw"></i>用户性质</span> <input class="form-control" type="text" placeholder="用户性质">
             </div>
           </div>
         </div>
         <div class="work_tickets_detail_row">
-          <div class="work_tickets_detail_normal first">
+          <div class="work_tickets_detail_wide">
             <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i>用户</span> <input class="form-control" type="text" placeholder="名称">
+              <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i>要求完成时间</span> <input class="form-control" type="text" placeholder="要求完成时间">
             </div>
           </div>
-          <div class="work_tickets_detail_normal">
+          <div class="work_tickets_detail_narrow">
             <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i>用户</span> <input class="form-control" type="password" placeholder="用户">
-            </div>
-          </div>
-          <div class="work_tickets_detail_normal">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i>用户</span> <input class="form-control" type="password" placeholder="用户">
-            </div>
-          </div>
-          <div class="work_tickets_detail_normal last">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i>用户</span> <input class="form-control" type="password" placeholder="用户">
+              <span class="input-group-addon"><i class="fa fa-rss fa-fw"></i>通道形式</span> <input class="form-control" type="text" placeholder="通道形式">
             </div>
           </div>
         </div>
@@ -144,44 +144,54 @@
             <div class="work_tickets_detail_station_li work_tickets_detail_station_card">
               <img src="images/substation.png" class="work_tickets_detail_station_card_img"> <span>市区供电公司</span>
             </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap right">
-              <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap left">
-              <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_card">
-              <img src="images/substation.png" class="work_tickets_detail_station_card_img"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap right">
-              <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap left">
-              <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_card">
-              <img src="images/substation.png" class="work_tickets_detail_station_card_img"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap right">
-              <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap left">
-              <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_card">
-              <img src="images/substation.png" class="work_tickets_detail_station_card_img"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap right">
-              <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司</span>
-            </div>
-            <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap left">
-              <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司</span>
+            <div class="work_tickets_detail_station_connection_container">
+              <div class="work_tickets_detail_station_connection_container_wrap">
+                <div class="work_tickets_detail_station_connection_wrap">
+                  <img src="images/detail_connection.png" class="work_tickets_detail_station_connection">
+                </div>
+                <div class="work_tickets_detail_station_connection_wrap left">
+                  <img src="images/detail_connection.png" class="work_tickets_detail_station_connection left">
+                </div>
+              </div>
+              <div class="work_tickets_detail_station_connection_status_wrap_container">
+                <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap">
+                  <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司市区供电公司市区供电公司电公司市区供电公司市区供电公司电公司市区供电公司市区供电公司市区供电公司</span>
+                </div>
+                <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap left">
+                  <img src="images/status_ready.png" class="work_tickets_detail_station_connection_status"> <span>市区供电公司区供电公司市区供电公司市区供电公</span>
+                </div>
+              </div>
             </div>
             <div class="work_tickets_detail_station_li work_tickets_detail_station_card">
               <img src="images/substation.png" class="work_tickets_detail_station_card_img"> <span>市区供电公司</span>
             </div>
           </div>
-          <div class="work_tickets_detail_stations_map"></div>
+          <div class="work_tickets_detail_stations_map">
+            <div class="work_tickets_detail_stations_map_searchbox">
+              <input class="work_tickets_detail_stations_map_searchbox_input" type="text" name="word" autocomplete="off" maxlength="256" placeholder="搜站点、查机房、找光缆" value="">
+              <i class="fa fa-search work_tickets_detail_stations_map_searchbox_searchbtn" aria-hidden="true"></i>
+            </div>
+            <div class="work_tickets_detail_stations_map_contentbox">
+              <div class="work_tickets_detail_stations_map_content">
+                <img src="images/substation.png" class="work_tickets_detail_stations_map_content_img"> <span>市区供电公司</span> <i class="fa fa-plus-circle" aria-hidden="true"></i>
+              </div>
+              <div class="work_tickets_detail_stations_map_content">
+                <img src="images/detail_connection.png" class="work_tickets_detail_stations_map_content_img"> <span>三级网青青0000(I)PTK16第5,6芯</span> <i class="fa fa-plus-circle"
+                  aria-hidden="true"></i>
+              </div>
+              <div class="work_tickets_detail_stations_map_content">
+                <img src="images/detail_connection.png" class="work_tickets_detail_stations_map_content_img"> <span>三级网塘练2A94(I)OHK48第13,14芯</span> <i
+                  class="fa fa-plus-circle" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="map_mark postion" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="市区供电公司"></div>
+            <div class="map_mark postion2" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="三级网青青0000(I)PTK16第5,6芯"></div>
+          </div>
+        </div>
+        <div class="work_tickets_detail_separator"></div>
+        <div class="work_tickets_detail_buttons_container">
+          <button class="work_tickets_detail_button work_tickets_detail_button_cancle" data-izimodal-close="">取消</button>
+          <button class="work_tickets_detail_button work_tickets_detail_button_submit">提交</button>
         </div>
       </div>
     </div>
@@ -190,10 +200,5 @@
   <!-- /#wrapper -->
 
   <%@include file="templates/work_sheet_card.jsp"%>
-  <script src="lib/jquery-3.1.1/jquery-3.1.1.min.js" type="text/javascript"></script>
-  <script type="text/javascript" src="lib/jsrender/jsrender.js"></script>
-  <script src="lib/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-  <script type="text/javascript" src="lib/iziModal/js/iziModal.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>

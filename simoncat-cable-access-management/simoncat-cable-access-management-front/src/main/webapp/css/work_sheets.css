@@ -248,6 +248,20 @@
   height: 90%;
 }
 
+.work_tickets_detail_group {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.work_tickets_detail_group span {
+  color: #e74c3c;
+}
+
+.work_tickets_detail_id {
+  float: right;
+}
+
 .work_tickets_detail_row {
   clear: both;
   display: inline-flex;
@@ -257,7 +271,6 @@
 .work_tickets_detail_wide {
   float: left;
   width: 70%;
-  padding-right: 5px;
 }
 
 .work_tickets_detail_narrow {
@@ -266,23 +279,14 @@
   padding-left: 5px;
 }
 
-.work_tickets_detail_normal {
-  float: left;
-  width: 25%;
-  padding: 0px 5px;
-}
-
-.work_tickets_detail_normal.first {
-  padding-left: 0px;
-}
-
-.work_tickets_detail_normal.last {
-  padding-right: 0px;
-}
-
 .work_tickets_detail_separator {
   width: 100%;
   border: 1px solid #88a0b9;
+}
+
+.work_tickets_detail_stations_container {
+  display: inline-flex;
+  width: 100%;
 }
 
 .work_tickets_detail_stations_list {
@@ -291,29 +295,82 @@
   margin: 10px 10px 10px 0px;
   border: 2px solid #bdc3c7;
   border-radius: 6px;
-  height: calc(100% - 190px);
+  height: calc(100% - 310px);
   overflow-y: auto;
 }
 
 .work_tickets_detail_station_li {
   box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
-  margin: 5px 10px;
   box-sizing: border-box;
   cursor: pointer;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.05);
-  background-image: linear-gradient(90deg, #FFD32E 10px, #EEE 10px, #EEE 11px, transparent
-    11px);
-  padding: 10px 15px 10px 25px;
   border: 1px solid #CCC;
 }
 
+.work_tickets_detail_station_li:hover {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px
+    rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+
+.work_tickets_detail_station_connection_container {
+  display: inline-flex;
+  margin: -1px 5px -1px 0px;
+}
+
+.work_tickets_detail_station_card {
+  margin: 5px 5px;
+  padding: 5px 5px 5px 15px;
+  background-image: linear-gradient(90deg, #17BCE8 10px, #EEE 10px, #EEE 11px, transparent
+    11px);
+}
+
 .work_tickets_detail_station_card_img {
-  width: 28px;
+  width: 25px;
+}
+
+.work_tickets_detail_station_connection_container_wrap {
+  width: 26px;
+  float: left;
+  position: relative;
+}
+
+.work_tickets_detail_station_connection_wrap {
+  position: absolute;
+  margin-left: 3px;
+}
+
+.work_tickets_detail_station_connection {
+  width: 22px;
+}
+
+.work_tickets_detail_station_connection_wrap.left {
+  bottom: 0px;
+}
+
+.work_tickets_detail_station_connection.left {
+  -ms-transform: rotateX(180deg); /* IE 9 */
+  -webkit-transform: rotateX(180deg); /* Chrome, Safari, Opera */
+  transform: rotateX(180deg);
+}
+
+.work_tickets_detail_station_connection_status_wrap_container {
+  width: calc(100% - 26px);
+  float: left;
+}
+
+.work_tickets_detail_station_connection_status_wrap {
+  margin-left: 2px;
+  background-image: initial;
+  padding: 0px 5px;
+}
+
+.work_tickets_detail_station_connection_status_wrap.left {
+  margin-top: 3px;
 }
 
 .work_tickets_detail_station_connection_status {
-  width: 28px;
+  width: 12px;
 }
 
 .work_tickets_detail_stations_map {
@@ -322,9 +379,119 @@
   margin: 10px 0px;
   border: 2px solid #bdc3c7;
   border-radius: 6px;
-  height: calc(100% - 190px);
+  height: calc(100% - 310px);
   overflow: hidden;
-  background-image: url("../img/back.PNG");
+  position: relative;
+  background-image: url("../img/qingbutangqiao.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.work_tickets_detail_stations_map .map_mark {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/green_mark.png);
+  background-size: contain;
+  position: relative;
+  cursor: pointer;
+}
+
+.work_tickets_detail_stations_map .map_mark.postion {
+  top: 290px;
+  left: 0px;
+}
+
+.work_tickets_detail_stations_map .map_mark.postion2 {
+  top: 99px;
+  left: 458px;
+}
+
+.work_tickets_detail_stations_map_searchbox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 400px;
+  background: white;
+}
+
+.work_tickets_detail_stations_map_searchbox_input {
+  padding-left: 5px;
+  width: 370px;
+  border: none;
+}
+
+.work_tickets_detail_stations_map_searchbox_searchbtn {
+  position: absolute;
+  top: 7px;
+  right: 6px;
+}
+
+.work_tickets_detail_stations_map_contentbox {
+  position: absolute;
+  top: 47px;
+  left: 10px;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 400px;
+  background: white;
+}
+
+.work_tickets_detail_stations_map_content {
+  margin: 5px 5px;
+  padding: 5px 5px 5px 15px;
+  background-image: linear-gradient(90deg, #17BCE8 10px, #EEE 10px, #EEE 11px, transparent
+    11px);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid #CCC;
+}
+
+.work_tickets_detail_stations_map_content img {
+  width: 25px;
+}
+
+.work_tickets_detail_stations_map_content i {
+  float: right;
+  font-size: 25px;
+  color: #17BCE8;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.work_tickets_detail_stations_map_content i:hover {
+  font-weight: bold;
+}
+
+.work_tickets_detail_buttons_container {
+  margin-top: 10px;
+}
+
+.work_tickets_detail_button {
+  color: white;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  width: 50%;
+  float: left;
+  padding: 4px;
+  font-size: 20px;
+}
+
+.work_tickets_detail_button_cancle {
+  border-radius: 6px 0 0 6px;
+  background: #aaa;
+}
+
+.work_tickets_detail_button_submit {
+  border-radius: 0 6px 6px 0;
+  background: #17BCE8;
 }
 
 .work_tickets_float_menu {

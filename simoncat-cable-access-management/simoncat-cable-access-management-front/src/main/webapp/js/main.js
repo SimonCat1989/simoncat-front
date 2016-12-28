@@ -1,3 +1,6 @@
+var stategrid = stategrid || {};
+stategrid.cableaccess = stategrid.cableaccess || {};
+
 $(document).ready(function() {
   var trigger = $('.hamburger'), overlay = $('.overlay'), isClosed = false;
 
@@ -24,10 +27,15 @@ $(document).ready(function() {
     $('#wrapper').toggleClass('toggled');
   });
 
+  // Init data
+  stategrid.cableaccess.data = fetchWorkTicketPendingData();
+
   initWorkTicketsTabs();
   initWorkTicketsContents();
   initWorkTicketsFloatMenu();
   initDialog();
+
+  $('[data-toggle="popover"]').popover();
 });
 
 function initWorkTicketsTabs() {
@@ -53,7 +61,7 @@ function initWorkTicketsTabs() {
 
 function initWorkTicketsContents() {
   var workTicketCardTemplate = $.templates("#work_sheet_card_template");
-  $("#work_tickets_pending_container").html(workTicketCardTemplate.render(fetchWorkTicketPendingData()));
+  $("#work_tickets_pending_container").html(workTicketCardTemplate.render(stategrid.cableaccess.data));
 }
 
 function initWorkTicketsFloatMenu() {
@@ -84,61 +92,47 @@ function initDialog() {
 
 function fetchWorkTicketPendingData() {
   return [ {
-    "plugmode" : true,
-    "title" : "市区供电公司-220kv蕰藻浜变电站DSC10G（光路）",
-    "id" : "沪电调通第20151290号",
-    "deadline" : "2014-06-05 17:00",
+    "plugmode" : false,
+    "plugmode_text" : "退出通知单",
+    "group" : "上海市电力公司话路运动",
+    "id" : "沪电调通第20160697号",
+    "title" : "青浦供电公司-220kv干练变电站华为10G（光缆）",
+    "user_kind" : "华为三级网",
+    "deadline" : "2016-03-15 17:00",
+    "channel_kind" : "光纤",
     "stations" : [ {
-      "name" : "市区供电公司",
+      "name" : "青浦供电公司",
       "prev" : "",
       "prev_status" : -1,
-      "next" : "光缆1231",
+      "next" : "三级网青青0000(I)PTK16第5,6芯",
       "next_status" : 0,
     }, {
-      "name" : "220kv洞庭变电站（通）",
-      "prev" : "光缆1231",
+      "name" : "220kv青浦变电站（通）",
+      "prev" : "三级网青青0000(I)PTK16第5,6芯",
       "prev_status" : 0,
-      "next" : "光缆1231",
+      "next" : "24芯联络缆(I)第5,6芯",
       "next_status" : 0,
     }, {
-      "name" : "220kv洞庭变电站（继）",
-      "prev" : "光缆1231",
+      "name" : "220kv青浦变电站（继）",
+      "prev" : "24芯联络缆(I)第5,6芯",
       "prev_status" : 0,
-      "next" : "光缆1231",
+      "next" : "三级网塘青2A54(I)OHK48第15,16芯",
       "next_status" : 0,
     }, {
-      "name" : "220kv森林变电站（继）",
-      "prev" : "光缆1231",
+      "name" : "500kv练塘变电站（220kv继1）",
+      "prev" : "三级网塘青2A54(I)OHK48第15,16芯",
       "prev_status" : 0,
-      "next" : "光缆1231",
+      "next" : "三级网塘练2A94(I)OHK48第13,14芯",
       "next_status" : 0,
     }, {
-      "name" : "闸北电厂（继）",
-      "prev" : "光缆1231",
+      "name" : "220kv干练变电站（继）",
+      "prev" : "三级网塘练2A94(I)OHK48第13,14芯",
       "prev_status" : 0,
-      "next" : "光缆1231",
+      "next" : "24芯联络缆(I)第11,12芯",
       "next_status" : 0,
     }, {
-      "name" : "闸北电厂（通）",
-      "prev" : "光缆1231",
-      "prev_status" : 0,
-      "next" : "光缆1231",
-      "next_status" : 0,
-    }, {
-      "name" : "220kv钢铁变电站（通）",
-      "prev" : "光缆1231",
-      "prev_status" : 0,
-      "next" : "光缆1231",
-      "next_status" : 0,
-    }, {
-      "name" : "220kv蕰藻浜变电站（通）",
-      "prev" : "光缆1231",
-      "prev_status" : 0,
-      "next" : "光缆1231",
-      "next_status" : 0,
-    }, {
-      "name" : "220kv蕰藻浜变电站（继）",
-      "prev" : "光缆1231",
+      "name" : "220kv干练变电站（通）",
+      "prev" : "24芯联络缆(I)第11,12芯",
       "prev_status" : 0,
       "next" : "",
       "next_status" : -1,
