@@ -31,5 +31,6 @@
     </div>
     <div class="work_tickets_card_station_container_row">{{/if}} {{/for}}</div></div>
     <div class="work_tickets_card_separator"></div>
+    <button class="work_tickets_card_button work_tickets_card_button_{{if status == 0}}pass{{else}}fail{{/if}}">审核{{if status == 1}}未{{/if}}通过</button>
   </div>
 </script>
