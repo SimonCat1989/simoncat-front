@@ -426,7 +426,7 @@
   height: calc(100% - 310px);
   overflow: hidden;
   position: relative;
-  background-image: url("../img/qingbutangqiao.png");
+  background-image: url("../images/map_init.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

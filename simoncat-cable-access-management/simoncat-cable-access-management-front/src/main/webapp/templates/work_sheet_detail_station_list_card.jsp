@@ -34,7 +34,7 @@
     <div class="work_tickets_detail_station_li work_tickets_detail_station_connection_status_wrap">
       <img
         src="images/{{if next_status == 0}}status_ready{{else next_status == 1}}status_occupied{{else next_status == 2}}status_finished{{else next_status == 3}}status_submitted{{/if}}.png"
-        class="work_tickets_detail_station_connection_status"> <span>{{:next}}</span><input
+        class="work_tickets_detail_station_connection_status"> <span>{{:next}}第</span><input
         type="text" class="work_tickets_detail_station_connection_input" name="word"
         autocomplete="off" maxlength="5" value="{{:next_port_1}}" data-index="{{#index}}"><span>,</span><input
         type="text" class="work_tickets_detail_station_connection_input" name="word"
