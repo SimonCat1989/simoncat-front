@@ -10,7 +10,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class ConnectionDto {
 
-	public static final ConnectionDto EMPTY = new ConnectionDto("", new ArrayList<Integer>(), -1);
+	public static final ConnectionDto EMPTY = new ConnectionDto("", new ArrayList<Integer>(0), -1);
 
 	private final String name;
 	private final List<Integer> ports;
