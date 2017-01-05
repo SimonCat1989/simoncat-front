@@ -28,12 +28,14 @@ $(document).ready(function() {
   });
 
   initData();
-  initWorkTicketsTabs();
-  initWorkTicketsContents();
-  initWorkTicketsFloatMenu();
-  initDialog();
-
-  $('[data-toggle="popover"]').popover();
+  $.get("./worksheets/pending/load.do", function(data){
+    stategrid.cableaccess.data = $.extend(true, [], data["pending"]);
+    initWorkTicketsTabs();
+    initWorkTicketsContents();
+    initWorkTicketsFloatMenu();
+    initDialog();
+  });
+  
 });
 
 function initData() {
@@ -71,14 +73,10 @@ function initWorkTicketsTabs() {
 
 function initWorkTicketsContents() {
   var workTicketCardTemplate = stategrid.cableaccess.templates["workTicketCard"];
-  $("#work_tickets_pending_container").html(
-      workTicketCardTemplate.render(stategrid.cableaccess.data));
-  $("#work_tickets_working_container").html(
-      workTicketCardTemplate.render(stategrid.cableaccess.data));
-  $("#work_tickets_submitting_container").html(
-      workTicketCardTemplate.render(stategrid.cableaccess.data));
-  $("#work_tickets_submitted_container").html(
-      workTicketCardTemplate.render(stategrid.cableaccess.data));
+  $("#work_tickets_pending_container").html(workTicketCardTemplate.render(stategrid.cableaccess.data));
+  $("#work_tickets_working_container").html(workTicketCardTemplate.render(stategrid.cableaccess.data));
+  $("#work_tickets_submitting_container").html(workTicketCardTemplate.render(stategrid.cableaccess.data));
+  $("#work_tickets_submitted_container").html(workTicketCardTemplate.render(stategrid.cableaccess.data));
 }
 
 function initWorkTicketsFloatMenu() {
@@ -91,8 +89,7 @@ function initDialog() {
   $("#work_sheet_detail_station_card_new_dialog").html(
       stategrid.cableaccess.templates["workTicketNewCard"].render({}));
   $("#work_sheet_detail_station_card_new_dialog .work_tickets_detail_stations_list").html(
-      stategrid.cableaccess.templates["workTicketStationCard"]
-          .render(stategrid.cableaccess.data[0]));
+      stategrid.cableaccess.templates["workTicketStationCard"].render(stategrid.cableaccess.data[0]));
   $(document).on(
       "click",
       ".work_tickets_detail_map_searchbtn",
@@ -119,7 +116,7 @@ function initDialog() {
   $("#work_sheet_detail_station_card_dialog").html(workTicketDetailStationCardTemplate.render({}));
 
   $("#work_sheet_detail_station_card_new_dialog").iziModal({
-    title : "新增工作票详细信息",
+    title : "新增工作单详细信息",
     headerColor : "rgb(0, 106, 106)",
     iconClass : "fa fa-pencil-square-o",
     width : "90%",
@@ -128,7 +125,7 @@ function initDialog() {
     transitionOutModal : 'fadeOut',
   });
   $("#work_sheet_detail_station_card_dialog").iziModal({
-    title : "工作票详细信息",
+    title : "工作单详细信息",
     headerColor : "rgb(0, 106, 106)",
     iconClass : "fa fa-pencil-square-o",
     width : "90%",
