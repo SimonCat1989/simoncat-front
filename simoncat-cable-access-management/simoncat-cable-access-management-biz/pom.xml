@@ -22,6 +22,15 @@
     </dependency>
 
     <dependency>
+      <groupId>com.simoncat.framework</groupId>
+      <artifactId>simoncat-framework-document-operator-spec</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.simoncat.framework</groupId>
+      <artifactId>simoncat-framework-document-operator-impl</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>

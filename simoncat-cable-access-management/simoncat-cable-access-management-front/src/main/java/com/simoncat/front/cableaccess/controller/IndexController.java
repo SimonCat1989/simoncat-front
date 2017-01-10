@@ -1,6 +1,6 @@
 package com.simoncat.front.cableaccess.controller;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.common.collect.Maps;
 import com.simoncat.front.cableaccess.dto.WorkSheetDto;
-import com.simoncat.front.cableacess.worksheet.WorkSheetManager;
+import com.simoncat.front.cableaccess.worksheet.WorkSheetManager;
 
 @Controller
 public class IndexController {
@@ -23,7 +23,7 @@ public class IndexController {
 	@ResponseBody
 	public Map<String, Object> loadPendingWorkSheets() {
 		Map<String, Object> modelMap = Maps.newHashMap();
-		List<WorkSheetDto> pendingSheets = workSheetManager.fetchPendingSheets();
+		Collection<WorkSheetDto> pendingSheets = workSheetManager.fetchPendingSheets();
 		modelMap.put("pending", pendingSheets);
 		return modelMap;
 	}

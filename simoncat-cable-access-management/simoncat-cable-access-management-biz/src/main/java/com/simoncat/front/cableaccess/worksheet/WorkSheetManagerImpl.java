@@ -1,5 +1,6 @@
-package com.simoncat.front.cableacess.worksheet;
+package com.simoncat.front.cableaccess.worksheet;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import com.simoncat.front.cableaccess.dto.WorkSheetDto;
 class WorkSheetManagerImpl implements WorkSheetManager {
 
 	@Override
-	public List<WorkSheetDto> fetchPendingSheets() {
+	public Collection<WorkSheetDto> fetchPendingSheets() {
 		List<WorkSheetDto> pendingSheets = Lists.newArrayList();
 		List<StationDto> stations = Lists.newArrayList();
 		StationDto stationDto = new StationDto("青浦供电公司", ConnectionDto.EMPTY, new ConnectionDto(
@@ -27,19 +28,19 @@ class WorkSheetManagerImpl implements WorkSheetManager {
 	}
 
 	@Override
-	public List<WorkSheetDto> fetchWorkingSheets() {
+	public Collection<WorkSheetDto> fetchWorkingSheets() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<WorkSheetDto> fetchSubmittingSheets() {
+	public Collection<WorkSheetDto> fetchSubmittingSheets() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<WorkSheetDto> fetchSubmittedSheets() {
+	public Collection<WorkSheetDto> fetchSubmittedSheets() {
 		// TODO Auto-generated method stub
 		return null;
 	}

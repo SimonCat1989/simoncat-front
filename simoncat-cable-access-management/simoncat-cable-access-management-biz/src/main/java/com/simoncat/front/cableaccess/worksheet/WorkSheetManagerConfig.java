@@ -1,4 +1,4 @@
-package com.simoncat.front.cableacess.worksheet;
+package com.simoncat.front.cableaccess.worksheet;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

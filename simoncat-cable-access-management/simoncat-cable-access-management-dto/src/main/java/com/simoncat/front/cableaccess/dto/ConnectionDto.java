@@ -5,15 +5,17 @@ import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class ConnectionDto {
 
 	public static final ConnectionDto EMPTY = new ConnectionDto("", new ArrayList<Integer>(0), -1);
 
-	private final String name;
-	private final List<Integer> ports;
-	private final int status;
+	private String name;
+	private List<Integer> ports;
+	private int status;
 
 }

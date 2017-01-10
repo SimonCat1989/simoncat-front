@@ -10,5 +10,7 @@
             http://www.springframework.org/schema/context/spring-context.xsd"
   default-lazy-init="true">
 
+  <bean class="com.simoncat.front.cableacess.dao.WorkSheetDaoConfig" />
+
   <bean class="com.simoncat.front.cableacess.worksheet.WorkSheetManagerConfig" />
 </beans>  
