@@ -12,17 +12,17 @@
   <div class="work_tickets_card_separator"></div>
   <div class="work_tickets_card_station_container">
     <div class="work_tickets_card_station_container_row">
-      {{for stations}} {{if prev_status != -1}}
+      {{for stations}} {{if prev.status != -1}}
       <div class="work_tickets_card_station_connection_status_wrap left">
-        <img src="images/{{if prev_status == 0}}status_ready{{else prev_status == 1}}status_occupied{{else prev_status == 2}}status_finished{{else prev_status == 3}}status_submitted{{/if}}.png" class="work_tickets_card_station_connection_status">
+        <img src="images/{{if prev.status == 0}}status_ready{{else prev.status == 1}}status_occupied{{else prev.status == 2}}status_finished{{else prev.status == 3}}status_submitted{{/if}}.png" class="work_tickets_card_station_connection_status">
       </div>
       {{/if}}
       <div class="work_tickets_card_station_wrap {{if #index == 0}}first{{/if}}">
         <img src="images/substation.png" class="work_tickets_card_station_img"> <span>{{:name}}</span>
       </div>
-      {{if next_status != -1}}
+      {{if next.status != -1}}
       <div class="work_tickets_card_station_connection_status_wrap right">
-        <img src="images/{{if next_status == 0}}status_ready{{else next_status == 1}}status_occupied{{else next_status == 2}}status_finished{{else next_status == 3}}status_submitted{{/if}}.png" class="work_tickets_card_station_connection_status">
+        <img src="images/{{if next.status == 0}}status_ready{{else next.status == 1}}status_occupied{{else next.status == 2}}status_finished{{else next.status == 3}}status_submitted{{/if}}.png" class="work_tickets_card_station_connection_status">
       </div>
       <div class="work_tickets_card_station_connection_wrap">
         <img src="images/connection.png" class="work_tickets_card_station_connection">
