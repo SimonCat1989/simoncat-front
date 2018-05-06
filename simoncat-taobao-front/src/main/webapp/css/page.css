@@ -1,0 +1,28 @@
+@charset "UTF-8";.cus-button-1525086374795 {
+    background-color: #f44d46;
+    color: #fff;
+    border: 1px solid #3c3c3d;
+    display: inline-block;
+    width: 80%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 4px;
+    box-shadow: 0 -1px 1px rgba(0,0,0,0.3) inset;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: -1px;
+    padding-bottom: 0;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: ;
+    border-color: #f44d46
+}
+
+.cus-button-1525086374795.clicked {
+  background-color: #a2a2a2;
+  border-color: #a2a2a2;
+}

@@ -8,6 +8,7 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>simoncat-taobao-front</module>
     <module>simoncat-station-topology-graph</module>
     <module>simoncat-cable-access-management</module>
     <module>simoncat-home-front</module>
