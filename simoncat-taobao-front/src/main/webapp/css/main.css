@@ -1,0 +1,26 @@
+.inner_user {
+  margin: 0 0 35px;
+  clear: both;
+}
+
+.inner_user a {
+  float: left;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 35px;
+  height: 35px
+}
+
+.user_image {
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.user_name {
+  color: #9b8878;
+  text-decoration: none;
+  cursor: pointer;
+}

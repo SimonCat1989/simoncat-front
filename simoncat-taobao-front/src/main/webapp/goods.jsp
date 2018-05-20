@@ -4,7 +4,7 @@
   String path = request.getContextPath();
   String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html class="kz-pc">
 <head>
 <base href="<%=basePath%>">
@@ -39,13 +39,13 @@
     <div class="page-w " style="background-color: tranparent; background-size:;">
       <div id="page-content" class="page-content">
         <div class="mod mod-pic mod-picone" style="margin:;">
-          <a href="javascript:;"><img src="${good}" title="" height="" fit=""></a>
+          <a href="javascript:;"><img src="${good}" title="" height=""></a>
         </div>
         <div class="mod mod-space" style="margin:;">
           <div class="space" style="height: 10px"></div>
         </div>
         <div class="mod mod-pic mod-picone" style="margin:;">
-          <a href="javascript:;"><img src="images/flow.png" title="" height="" fit=""></a>
+          <a href="javascript:;"><img src="images/flow.png" title="" height=""></a>
         </div>
         <div class="new-button" style="text-align:">
           <a id="btn_copy_taobao_token" class="new-button-link cus-button-1525086374795"><span>一键复制淘口令</span></a>
