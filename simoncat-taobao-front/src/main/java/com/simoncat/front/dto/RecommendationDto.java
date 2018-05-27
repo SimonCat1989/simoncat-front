@@ -1,6 +1,7 @@
 package com.simoncat.front.dto;
 
-import com.simoncat.front.vo.RecommendationVo;
+import java.util.Collections;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +12,7 @@ public class RecommendationDto {
 
 	public static final RecommendationDto EMPTY = new RecommendationDto("", "", "", "", "", "", "", "", 0, 0, 0, 0, "",
 			"", "");
-	
+
 	private final String contentId;
 	private final String title;
 	private final String author;

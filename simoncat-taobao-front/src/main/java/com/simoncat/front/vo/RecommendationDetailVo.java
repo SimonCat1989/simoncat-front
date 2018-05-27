@@ -10,9 +10,9 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class DetailsContentVo {
+public class RecommendationDetailVo {
 
-	public static final DetailsContentVo EMPTY = new DetailsContentVo("", "", "", "", "", "", "", 0, 0, 0, 0, "", "",
+	public static final RecommendationDetailVo EMPTY = new RecommendationDetailVo("", "", "", "", "", "", "", 0, 0, 0, 0, "", "",
 			"", Collections.emptyList());
 
 	private final String title;

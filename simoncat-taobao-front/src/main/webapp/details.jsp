@@ -38,7 +38,6 @@
           <li><a href="#" class="icon fa-facebook">${contents.getFacebook()}</a></li>
         </ul>
       </div>
-      <div class="image featured"><img src="${contents.getImage()}" alt="" /></div>
       <p>
         <strong>${contents.getKeyword()}</strong> ${contents.getDescription()}
       </p>
