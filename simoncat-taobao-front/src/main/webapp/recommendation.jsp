@@ -20,13 +20,23 @@
 <link rel="shortcut icon" href="images/icon.ico" />
 </head>
 <body>
+  <div class="banner">
+    <ul>
+      <li><img src="images/banner-1.jpg"></li>
+      <li><img src="images/banner-2.jpg"></li>
+      <li><img src="images/banner-3.jpg"></li>
+      <li><img src="images/banner-4.jpg"></li>
+      <li><img src="images/banner-6.jpg"></li>
+    </ul>
+  </div>
   <div id="content">
     <div class="inner">
       <c:forEach items="${vo.getData()}" var="data" varStatus="index">
         <article class="box post post-excerpt">
           <header>
             <h2>
-              <a href="recommendation/detail.do?recommendationId=${data.getContentId()}" target="view_window">${data.getTitle()}</a>
+              <a href="recommendation/detail.do?recommendationId=${data.getContentId()}"
+                target="view_window">${data.getTitle()}</a>
             </h2>
             <p>
               <img src="${data.getAuthorAvatar()}" />${data.getAuthor()}
@@ -46,21 +56,22 @@
           <div class="container">
             <div class="mhn-slide owl-carousel">
               <c:forEach items="${books.get(index.index)}" var="book">
-              <div class="mhn-item">
-                <div class="mhn-inner">
-                  <img src="${book.getImage()}">
-                  <div class="mhn-img">
-                    <div class="loader-circle">
-                      <div class="loader-stroke-left"></div>
-                      <div class="loader-stroke-right"></div>
+                <div class="mhn-item">
+                  <div class="mhn-inner">
+                    <img src="${book.getImage()}">
+                    <div class="mhn-img">
+                      <div class="loader-circle">
+                        <div class="loader-stroke-left"></div>
+                        <div class="loader-stroke-right"></div>
+                      </div>
+                    </div>
+                    <div class="mhn-text">
+                      <h4>《${book.getName()}》</h4>
+                      <p>
+                        <i class="icon fa-copyright" style="margin-right: 2px;"></i>${book.getAuthor()}</p>
                     </div>
                   </div>
-                  <div class="mhn-text">
-                    <h4>《${book.getName()}》</h4>
-                    <p><i class="icon fa-copyright" style="margin-right: 2px;"></i>${book.getAuthor()}</p>
-                  </div>
                 </div>
-              </div>
               </c:forEach>
             </div>
           </div>
@@ -219,7 +230,8 @@
   <script src="assets/js/util.js"></script>
   <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
   <script type="text/javascript" src="lib/owl-carousel-banner/owl.carousel.min.js"></script>
-  <script src="assets/js/main.js"></script>
-
+  <script type="text/jscript" src="lib/jquery-banner/jquery.terseBanner.min.js"></script>
+  <script type="text/jscript" src="assets/js/main.js"></script>
+  <script type="text/jscript" src="assets/js/banner.js"></script>
 </body>
 </html>
