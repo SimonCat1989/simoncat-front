@@ -15,7 +15,7 @@ public class RecommendationDetailServiceImpl implements RecommendationDetailServ
 	private static final ObjectMapper LOCAL_MAPPER = new ObjectMapper();
 	
 	@Override
-	public RecommendationDetailVo load(String recommendationId) {
+	public RecommendationDetailVo load(int recommendationId) {
 		File contentFile = Paths.get(this.getClass().getResource("/").getPath(),"assets", recommendationId + ".json").toFile();
 		try {
 			return LOCAL_MAPPER.readValue(contentFile, RecommendationDetailVo.class);

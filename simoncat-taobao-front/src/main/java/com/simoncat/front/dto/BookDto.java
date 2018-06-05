@@ -15,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @Entity
-@Table(name = "Book")
+@Table(name = "BOOK")
 public class BookDto implements Serializable {
 
     private static final long serialVersionUID = -4652832953722967602L;
@@ -27,27 +27,27 @@ public class BookDto implements Serializable {
     private String content;
 
     @Id
-    @Column(name = "id", unique = true, nullable = false, precision = 5, scale = 0)
+    @Column(name = "ID", unique = true, nullable = false, precision = 5, scale = 0)
     public int getId() {
         return id;
     }
 
-    @Column(name = "name", nullable = false, length = 60)
+    @Column(name = "NAME", nullable = false, length = 60)
     public String getName() {
         return name;
     }
 
-    @Column(name = "author", nullable = false, length = 60)
+    @Column(name = "AUTHOR", nullable = false, length = 60)
     public String getAuthor() {
         return author;
     }
 
-    @Column(name = "cover_img", nullable = false, length = 100)
+    @Column(name = "COVER", nullable = false, length = 100)
     public String getImage() {
         return image;
     }
 
-    @Column(name = "description", nullable = false, length = 1000)
+    @Column(name = "DESCRIPTION", nullable = false, length = 1000)
     public String getContent() {
         return content;
     }

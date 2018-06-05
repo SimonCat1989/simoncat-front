@@ -15,14 +15,14 @@ import com.simoncat.front.service.RecommendationDetailService;
 @Controller
 public class RecommendationDetailController {
 
-	@Autowired
-	private RecommendationDetailService recommendationDetailService;
+    @Autowired
+    private RecommendationDetailService recommendationDetailService;
 
-	@RequestMapping(value = "/recommendation/detail.do", method = RequestMethod.GET)
-	public ModelAndView content(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)
-			throws Exception {
-		String recommendationId = request.getParameter("recommendationId");
-		modelMap.put("contents", recommendationDetailService.load(recommendationId));
-		return new ModelAndView("/details", modelMap);
-	}
+    @RequestMapping(value = "/recommendation/detail.do", method = RequestMethod.GET)
+    public ModelAndView content(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)
+            throws Exception {
+        int recommendationId = Integer.parseInt(request.getParameter("recommendationId"));
+        modelMap.put("contents", recommendationDetailService.load(recommendationId));
+        return new ModelAndView("/details", modelMap);
+    }
 }

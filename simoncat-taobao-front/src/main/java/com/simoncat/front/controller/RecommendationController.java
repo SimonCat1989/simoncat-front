@@ -19,20 +19,22 @@ import com.simoncat.front.vo.RecommendationVo;
 @Controller
 public class RecommendationController {
 
-	@Autowired
-	private RecommendationService recommendationService;
-	
-	@Autowired
-	private RecommendationDetailService recommendationDetailService;
-	
-	@RequestMapping(value = "/recommendation.do", method = RequestMethod.GET)
-	public ModelAndView recommendation(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)
-			throws Exception {
-		RecommendationVo recommendationVo = recommendationService.loadAll();
-		modelMap.put("vo", recommendationVo);
-		
-		modelMap.put("books", recommendationVo.getData().stream().map(dto -> recommendationDetailService.load(dto.getContentId()).getData()).collect(Collectors.toList()));
-		
-		return new ModelAndView("/recommendation", modelMap);
-	}
+    @Autowired
+    private RecommendationService recommendationService;
+
+    @Autowired
+    private RecommendationDetailService recommendationDetailService;
+
+    @RequestMapping(value = "/recommendation.do", method = RequestMethod.GET)
+    public ModelAndView recommendation(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)
+            throws Exception {
+        RecommendationVo recommendationVo = recommendationService.loadAll();
+        modelMap.put("vo", recommendationVo);
+
+        modelMap.put("books",
+                recommendationVo.getData().stream().map(dto -> recommendationDetailService.load(dto.getId()).getData())
+                        .collect(Collectors.toList()));
+
+        return new ModelAndView("/recommendation", modelMap);
+    }
 }
