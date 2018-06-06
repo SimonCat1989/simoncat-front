@@ -49,6 +49,13 @@ public class InitDatabase {
                             (String) json.get("description"));
                 }).collect(Collectors.toList());
 
+        ((JSONArray) parser.parse(new FileReader(Paths.get(
+                this.getClass().getResource("/").getPath(), "assets", "recommend.json").toFile())))
+                .stream().map(recommendJson -> {
+                	JSONObject json = (JSONObject) recommendJson;
+                	
+                })
+        
         bookTypeList.values().stream().forEach(dto -> {
             session.saveOrUpdate(dto);
         });

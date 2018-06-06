@@ -1,41 +1,54 @@
 package com.simoncat.front.dto;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
-@AllArgsConstructor
 @NoArgsConstructor
-@Setter
+@RequiredArgsConstructor(staticName = "of")
+@AllArgsConstructor
+@Data
 @Entity
-@Table(name = "RECOMMENDATION")
-public class RecommendationDto implements Serializable {
+@Table(name = "essay")
+public class EssayDto {
 
-    private static final long serialVersionUID = -6811441059854077830L;
-
-    public static final RecommendationDto EMPTY = new RecommendationDto(-1, "", "", "", "", "", "", "", 0, 0, 0, 0, "",
+    public static final EssayDto EMPTY = new EssayDto(-1, "", "", "", "", "", "", "", 0, 0, 0, 0, "",
             "");
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
+    @NonNull
     private String title;
+    @NonNull
     private String author;
+    @NonNull
     private String authorAvatar;
+    @NonNull
     private String createMonth;
+    @NonNull
     private String createMonthSuffix;
+    @NonNull
     private String createDay;
+    @NonNull
     private String createYear;
     private int comment;
     private int heart;
     private int twitter;
     private int facebook;
+    @NonNull
     private String keyword;
+    @NonNull
     private String description;
 
     @Id

@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import com.simoncat.front.dto.RecommendationDto;
+import com.simoncat.front.dto.EssayDto;
 
 @Data
 @AllArgsConstructor
@@ -16,5 +16,5 @@ public class RecommendationVo {
 
 	public static final RecommendationVo EMPTY = new RecommendationVo(Collections.emptyList());
 
-	private List<RecommendationDto> data;
+	private List<EssayDto> data;
 }
