@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.hibernate.Session;
@@ -19,6 +20,8 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.simoncat.front.dao.HibernateUtil;
 import com.simoncat.front.dto.BookDto;
 import com.simoncat.front.dto.BookTypeDto;
+import com.simoncat.front.dto.EssayCommentDto;
+import com.simoncat.front.dto.EssayDto;
 
 public class InitDatabase {
 
@@ -39,7 +42,7 @@ public class InitDatabase {
                                     return BookTypeDto.of((String) json.get("type"));
                                 }));
 
-        List<BookDto> bookList = (List<BookDto>) ((JSONArray) parser.parse(new FileReader(Paths.get(
+        Map<String, BookDto> bookList = (Map<String, BookDto>) ((JSONArray) parser.parse(new FileReader(Paths.get(
                 this.getClass().getResource("/").getPath(), "assets", "book.json").toFile())))
                 .stream()
                 .map(bookJson -> {
@@ -47,19 +50,41 @@ public class InitDatabase {
                     return BookDto.of((String) json.get("name"), (String) json.get("author"),
                             bookTypeList.get(json.get("type")), (String) json.get("cover"),
                             (String) json.get("description"));
-                }).collect(Collectors.toList());
+                }).collect(Collectors.toMap(BookDto::getName, dto -> dto));
 
-        ((JSONArray) parser.parse(new FileReader(Paths.get(
+        Set<EssayDto> EssayList = (Set<EssayDto>) ((JSONArray) parser.parse(new FileReader(Paths.get(
                 this.getClass().getResource("/").getPath(), "assets", "recommend.json").toFile())))
-                .stream().map(recommendJson -> {
-                	JSONObject json = (JSONObject) recommendJson;
-                	
-                })
-        
+                .stream()
+                .map(recommendJson -> {
+                    JSONObject json = (JSONObject) recommendJson;
+
+                    EssayDto essay = EssayDto.of((String) json.get("title"), (String) json.get("author"),
+                            (String) json.get("authorAvatar"), (String) json.get("createMonth"),
+                            (String) json.get("createMonthSuffix"), (String) json.get("createDay"),
+                            (String) json.get("createYear"), (Integer) json.get("comment"),
+                            (Integer) json.get("heart"), (Integer) json.get("twitter"), (Integer) json.get("facebook"),
+                            (String) json.get("keyword"), (String) json.get("description"));
+
+                    Set<EssayCommentDto> essayComments = (Set<EssayCommentDto>) ((JSONArray) json.get("books"))
+                            .stream()
+                            .map(commentJson -> {
+                                JSONObject json1 = (JSONObject) commentJson;
+                                return EssayCommentDto.of((String) json1.get("content"), essay,
+                                        bookList.get((String) json1.get("name")));
+                            }).collect(Collectors.toSet());
+
+                    essay.setEssayComments(essayComments);
+
+                    return essay;
+                }).collect(Collectors.toSet());
+
         bookTypeList.values().stream().forEach(dto -> {
             session.saveOrUpdate(dto);
         });
-        bookList.stream().forEach(dto -> {
+        bookList.values().stream().forEach(dto -> {
+            session.saveOrUpdate(dto);
+        });
+        EssayList.stream().forEach(dto -> {
             session.saveOrUpdate(dto);
         });
         session.getTransaction().commit();
