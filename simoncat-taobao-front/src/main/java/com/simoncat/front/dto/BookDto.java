@@ -13,14 +13,16 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @RequiredArgsConstructor(staticName = "of")
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "book")
 public class BookDto {
@@ -43,7 +45,7 @@ public class BookDto {
     private String cover;
     @NonNull
     private String description;
-    
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "essayCommentId.bookId")
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "essayCommentId.book")
     private Set<EssayCommentDto> comments;
 }

@@ -1,9 +1,8 @@
-package com.simoncat.front;
+package com.simoncat.front.dao;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -61,16 +60,18 @@ public class InitDatabase {
                     EssayDto essay = EssayDto.of((String) json.get("title"), (String) json.get("author"),
                             (String) json.get("authorAvatar"), (String) json.get("createMonth"),
                             (String) json.get("createMonthSuffix"), (String) json.get("createDay"),
-                            (String) json.get("createYear"), (Integer) json.get("comment"),
-                            (Integer) json.get("heart"), (Integer) json.get("twitter"), (Integer) json.get("facebook"),
-                            (String) json.get("keyword"), (String) json.get("description"));
+                            (String) json.get("createYear"), ((Long) json.get("comment")).intValue(),
+                            ((Long) json.get("heart")).intValue(), ((Long) json.get("twitter")).intValue(),
+                            ((Long) json.get("facebook")).intValue(), (String) json.get("keyword"),
+                            (String) json.get("description"));
 
                     Set<EssayCommentDto> essayComments = (Set<EssayCommentDto>) ((JSONArray) json.get("books"))
-                            .stream()
-                            .map(commentJson -> {
+                            .stream().map(commentJson -> {
                                 JSONObject json1 = (JSONObject) commentJson;
-                                return EssayCommentDto.of((String) json1.get("content"), essay,
-                                        bookList.get((String) json1.get("name")));
+                                EssayCommentDto dto = EssayCommentDto.of((String) json1.get("content"));
+                                dto.setBook(bookList.get((String) json1.get("name")));
+                                dto.setEssay(essay);
+                                return dto;
                             }).collect(Collectors.toSet());
 
                     essay.setEssayComments(essayComments);

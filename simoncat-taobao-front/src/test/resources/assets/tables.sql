@@ -48,5 +48,3 @@ create table `essay_comment` (
 	CONSTRAINT `fk_essay` FOREIGN KEY (`essay_id`) REFERENCES `essay` (`id`),
 	CONSTRAINT `fk_book` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`)
 );
-
-insert into BOOK values (1, `123`, `12`, `12`, `12`);

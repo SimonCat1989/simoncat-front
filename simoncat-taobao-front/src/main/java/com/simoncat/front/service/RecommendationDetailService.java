@@ -4,5 +4,5 @@ import com.simoncat.front.vo.RecommendationDetailVo;
 
 public interface RecommendationDetailService {
 
-	RecommendationDetailVo load(int recommendationId);
+	RecommendationDetailVo load(long recommendationId);
 }

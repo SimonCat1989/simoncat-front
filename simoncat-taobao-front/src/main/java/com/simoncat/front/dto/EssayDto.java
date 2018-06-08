@@ -1,6 +1,5 @@
 package com.simoncat.front.dto;
 
-import java.util.Collections;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -12,26 +11,23 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @RequiredArgsConstructor(staticName = "of")
-@AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "essay")
 public class EssayDto {
 
-    public static final EssayDto EMPTY = new EssayDto(-1, "", "", "", "", "", "", "", 0, 0, 0, 0, "", "",
-            Collections.emptySet());
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @NonNull
     private String title;
@@ -60,6 +56,6 @@ public class EssayDto {
     @NonNull
     private String description;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "essayCommentId.essayId", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "essayCommentId.essay", cascade = CascadeType.ALL)
     private Set<EssayCommentDto> essayComments;
 }
