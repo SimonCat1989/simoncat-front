@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.simoncat.front.service.EssayService;
-import com.simoncat.front.service.RecommendationDetailService;
 import com.simoncat.front.vo.EssayListVo;
 
 @Controller
@@ -22,9 +21,6 @@ public class HomeController {
 
     @Autowired
     private EssayService essayService;
-
-    @Autowired
-    private RecommendationDetailService recommendationDetailService;
 
     @RequestMapping(value = "/home.do", method = RequestMethod.GET)
     public ModelAndView home(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)

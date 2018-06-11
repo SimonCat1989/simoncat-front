@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
-  String path = request.getContextPath();
-  String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
 %>
 <!DOCTYPE HTML>
 <html>
@@ -35,8 +36,7 @@
         <article class="box post post-excerpt">
           <header>
             <h2>
-              <a href="recommendation/detail.do?recommendationId=${data.getContentId()}"
-                target="view_window">${data.getTitle()}</a>
+              <a href="home/essay.do?essayId=${data.getId()}" target="view_window">${data.getTitle()}</a>
             </h2>
             <p>
               <img src="${data.getAuthorAvatar()}" />${data.getAuthor()}
@@ -55,10 +55,10 @@
           </div>
           <div class="container">
             <div class="mhn-slide owl-carousel">
-              <c:forEach items="${books.get(index.index)}" var="book">
+              <c:forEach items="${essays.getBooks()}" var="book">
                 <div class="mhn-item">
                   <div class="mhn-inner">
-                    <img src="${book.getImage()}">
+                    <img src="${book.getCover()}">
                     <div class="mhn-img">
                       <div class="loader-circle">
                         <div class="loader-stroke-left"></div>
@@ -81,8 +81,8 @@
             <strong>${data.getKeyword()}</strong> ${data.getDescription()}
           </p>
           <p>
-            <a href="recommendation/detail.do?recommendationId=${data.getContentId()}"
-              target="view_window"><span class="contentForAll">查看全文</span></a>
+            <a href="home/essay.do?essayId=${data.getId()}" target="view_window"><span
+              class="contentForAll">查看全文</span></a>
           </p>
         </article>
       </c:forEach>
@@ -91,12 +91,19 @@
       <div class="pagination">
         <!--<a href="#" class="button previous">Previous Page</a>-->
         <div class="pages">
-          <a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <span>&hellip;</span>
-          <a href="#">20</a>
+          <c:forEach var="pageCount" begin="1" end="${essays.getTotalPage()}" step="1">
+            <c:choose>
+              <c:when test="${pageCount == essays.getCurrentPage()}">
+                <a href="#" class="active">${pageCount}</a>
+              </c:when>
+              <c:otherwise>
+                <a href="#">${pageCount}</a>
+              </c:otherwise>
+            </c:choose>
+          </c:forEach>
         </div>
         <a href="#" class="button next">下一页</a>
       </div>
-
     </div>
   </div>
 
@@ -110,8 +117,8 @@
     <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li class="current"><a href="recommendation.do">火爆热门</a></li>
-        <li><a href="recommendation.do">24小时</a></li>
+        <li class="current"><a href="recommendation.do">新鲜速递</a></li>
+        <li><a href="recommendation.do">火爆热门</a></li>
         <li><a href="recommendation.do">分类排行</a></li>
         <li><a href="recommendation.do">随便看看</a></li>
       </ul>
@@ -128,7 +135,7 @@
     <section class="box text-style1">
       <div class="inner">
         <p>
-          <strong>赛门猫一番：</strong>爱生活，爱小说，小说迷聚集地。
+          <strong>赛门猫一番：</strong>爱生活，爱小说，爱分享。
         </p>
       </div>
     </section>
