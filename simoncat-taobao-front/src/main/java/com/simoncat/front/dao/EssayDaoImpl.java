@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 class EssayDaoImpl implements EssayDao {
 
-	private static final String HQL_GET_TOTAL_COUNT = "select count (e.id) from essay e";
+	private static final String HQL_GET_TOTAL_COUNT = "select count(e.id) from essay e";
 	private static final int PAGE_SIZE = 5;
 
 	@Override

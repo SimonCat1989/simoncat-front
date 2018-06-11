@@ -26,7 +26,7 @@ public class HomeController {
     public ModelAndView home(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)
             throws Exception {
         String page = request.getParameter("page");
-        int pageId = StringUtils.isBlank(page) ? 0 : Integer.parseInt(page);
+        int pageId = StringUtils.isBlank(page) ? 1 : Integer.parseInt(page);
         Optional<EssayListVo> essays = essayService.loadAll(pageId);
         if (essays.isPresent()) {
             modelMap.put("essays", essays.get());
