@@ -1,9 +1,5 @@
 package com.simoncat.front.vo;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import com.simoncat.front.dto.EssayCommentDto;
 import com.simoncat.front.dto.EssayDto;
 
 import lombok.Data;
@@ -25,7 +21,6 @@ public class EssayAbstractVo {
 	private Integer facebook;
 	private String keyword;
 	private String description;
-	private List<BookAbstractVo> books;
 
 	public EssayAbstractVo(EssayDto dto) {
         this.id = dto.getId();
@@ -42,6 +37,5 @@ public class EssayAbstractVo {
         this.facebook = dto.getFacebook();
         this.keyword = dto.getKeyword();
         this.description = dto.getDescription();
-        this.books = dto.getEssayComments().stream().map(EssayCommentDto::getBook).map(BookAbstractVo::new).collect(Collectors.toList());
     }
 }

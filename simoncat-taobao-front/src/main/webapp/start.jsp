@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>赛门猫一番</title>
-<META HTTP-EQUIV="Refresh" CONTENT="0; URL=recommendation.do">
+<META HTTP-EQUIV="Refresh" CONTENT="0; URL=home.do">
 </head>
 <body>
 </body>

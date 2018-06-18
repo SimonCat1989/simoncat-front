@@ -1,12 +1,14 @@
 package com.simoncat.front.dao;
 
-import java.util.Optional;
+import java.util.List;
 
-import com.simoncat.front.vo.EssayListVo;
+import com.simoncat.front.dto.EssayDto;
 
 public interface EssayDao {
 
-    Optional<EssayListVo> loadAll();
+	List<EssayDto> loadAll();
 
-    Optional<EssayListVo> loadAll(int page);
+	List<EssayDto> loadAll(int page);
+	
+	int getTotalCount();
 }

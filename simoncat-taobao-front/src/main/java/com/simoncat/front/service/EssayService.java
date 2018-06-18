@@ -1,12 +1,13 @@
 package com.simoncat.front.service;
 
-import java.util.Optional;
-
-import com.simoncat.front.vo.EssayListVo;
+import com.simoncat.front.vo.EssayVo;
+import com.simoncat.front.vo.SinglePageEssayListVo;
 
 public interface EssayService {
 
-    Optional<EssayListVo> loadAll();
+    SinglePageEssayListVo loadAll();
 
-    Optional<EssayListVo> loadAll(int page);
+    SinglePageEssayListVo loadAll(int page);
+    
+    EssayVo loadEssay(String essayId);
 }

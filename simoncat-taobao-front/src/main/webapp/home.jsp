@@ -55,7 +55,7 @@
           </div>
           <div class="container">
             <div class="mhn-slide owl-carousel">
-              <c:forEach items="${essays.getBooks()}" var="book">
+              <c:forEach items="${data.getBooks()}" var="book">
                 <div class="mhn-item">
                   <div class="mhn-inner">
                     <img src="${book.getCover()}">
@@ -75,8 +75,6 @@
               </c:forEach>
             </div>
           </div>
-          <!-- <a href="content.do?contentId=${data.getContentId()}" target="view_window"
-            class="image featured"><img src="${data.getImage()}" alt="" /></a> -->
           <p>
             <strong>${data.getKeyword()}</strong> ${data.getDescription()}
           </p>

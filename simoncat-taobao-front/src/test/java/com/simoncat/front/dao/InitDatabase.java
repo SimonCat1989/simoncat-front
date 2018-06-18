@@ -94,11 +94,5 @@ public class InitDatabase {
         System.out.println(dto.getType());
         BookTypeDto dto2 = session.load(BookTypeDto.class, 2L);
         System.out.println(dto2.getType());
-
-        // BookDto dto = session.load(BookDto.class, 1);
-        // System.out.println(dto.getType().getType());
-
-        // RecommendationDto dto1 = session.load(RecommendationDto.class, 1);
-        // System.out.println(dto1.getDescription());
     }
 }
