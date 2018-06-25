@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.simoncat.front.service.EssayService;
-import com.simoncat.front.vo.EssayListVo;
+import com.simoncat.front.vo.EssayVo;
 
 @Controller
 public class HomeController {
@@ -25,12 +25,23 @@ public class HomeController {
     @RequestMapping(value = "/home.do", method = RequestMethod.GET)
     public ModelAndView home(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)
             throws Exception {
-        String page = request.getParameter("page");
-        int pageId = StringUtils.isBlank(page) ? 1 : Integer.parseInt(page);
-        Optional<EssayListVo> essays = essayService.loadAll(pageId);
-        if (essays.isPresent()) {
-            modelMap.put("essays", essays.get());
-        }
+        final String page = request.getParameter("page");
+        modelMap.put("essays", essayService.loadAll(StringUtils.isBlank(page) ? 1 : Integer.parseInt(page)));
         return new ModelAndView("/home", modelMap);
+    }
+
+    @RequestMapping(value = "/home/essay.do", method = RequestMethod.GET)
+    public ModelAndView essay(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)
+            throws Exception {
+        final String essayId = request.getParameter("essayId");
+        if (StringUtils.isNotBlank(essayId) && StringUtils.isNumeric(essayId)) {
+            Optional<EssayVo> essay = essayService.loadEssay(Long.parseLong(essayId));
+            if (essay.isPresent()) {
+                modelMap.put("essay", essay.get());
+                return new ModelAndView("/essay", modelMap);
+            }
+        }
+        // TODO redirect to error page
+        return new ModelAndView("/error", modelMap);
     }
 }

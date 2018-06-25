@@ -2,11 +2,11 @@ package com.simoncat.front.dao;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.junit.Test;
 
-import com.simoncat.front.vo.EssayListVo;
+import com.simoncat.front.dto.EssayDto;
 
 public class EssayDaoImplTest {
 
@@ -14,7 +14,8 @@ public class EssayDaoImplTest {
 
     @Test
     public void testLoadAll() {
-        Optional<EssayListVo> results = dao.loadAll(1);
-        assertTrue(results.isPresent());
+        List<EssayDto> results = dao.loadAll(1);
+        System.out.println(results.get(0).getEssayComments());
+        assertTrue(results.size() > 0);
     }
 }

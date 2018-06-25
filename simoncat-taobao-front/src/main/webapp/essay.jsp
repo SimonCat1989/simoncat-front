@@ -21,38 +21,38 @@
     <div class="inner">
       <article class="box post post-excerpt"> <header>
       <h2>
-        ${contents.getTitle()}
+        ${essay.getTitle()}
       </h2>
       <p>
-        <img src="${contents.getAuthorAvatar()}" />${contents.getAuthor()}
+        <img src="${essay.getAuthorAvatar()}" />${essay.getAuthor()}
       </p>
       </header>
       <div class="info">
-        <span class="date"><span class="month">${contents.getCreateMonth()}<span>${contents.getCreateMonthSuffix()}</span></span>
-          <span class="day">${contents.getCreateDay()}</span><span class="year">,
-            ${contents.getCreateYear()}</span></span>
+        <span class="date"><span class="month">${essay.getCreateMonth()}<span>${essay.getCreateMonthSuffix()}</span></span>
+          <span class="day">${essay.getCreateDay()}</span><span class="year">,
+            ${essay.getCreateYear()}</span></span>
         <ul class="stats">
-          <li><a href="#" class="icon fa-comment">${contents.getComment()}</a></li>
-          <li><a href="#" class="icon fa-heart">${contents.getHeart()}</a></li>
-          <li><a href="#" class="icon fa-twitter">${contents.getTwitter()}</a></li>
-          <li><a href="#" class="icon fa-facebook">${contents.getFacebook()}</a></li>
+          <li><a href="#" class="icon fa-comment">${essay.getComment()}</a></li>
+          <li><a href="#" class="icon fa-heart">${essay.getHeart()}</a></li>
+          <li><a href="#" class="icon fa-twitter">${essay.getTwitter()}</a></li>
+          <li><a href="#" class="icon fa-facebook">${essay.getFacebook()}</a></li>
         </ul>
       </div>
       <p>
-        <strong>${contents.getKeyword()}</strong> ${contents.getDescription()}
+        <strong>${essay.getKeyword()}</strong> ${essay.getDescription()}
       </p>
-      <c:forEach items="${contents.getData()}" var="data" varStatus="index">
+      <c:forEach items="${essay.getEssayComments()}" var="data" varStatus="index">
         <div style="padding: .5em; border: 1px solid #CBCBCB; margin-bottom: 10px;">
           <table style="margin: 0;">
             <tr>
-              <td style="width: 20%; vertical-align: top;"><img alt="" src="${data.getImage()}"
+              <td style="width: 20%; vertical-align: top;"><img alt="" src="${data.getBookCover()}"
                 style="width: 90%;"></td>
               <td style="width: 80%;">
                 <div
-                  style="text-decoration: none; color: #666; font-size: 30px; margin: 0px 0 10px -10px; line-height: 1; font-weight: bold;">《${data.getName()}》</div>
+                  style="text-decoration: none; color: #666; font-size: 30px; margin: 0px 0 10px -10px; line-height: 1; font-weight: bold;">《${data.getBookName()}》</div>
                 <div style="font-style: italic;">
-                  <i class="icon fa-copyright" style="margin-right: 2px;"></i>${data.getAuthor()}</div>
-                <div style="margin-top: 10px;">${data.getContent()}</div>
+                  <i class="icon fa-copyright" style="margin-right: 2px;"></i>${data.getBookAuthor()}</div>
+                <div style="margin-top: 10px;">${data.getComment()}</div>
               </td>
             </tr>
           </table>

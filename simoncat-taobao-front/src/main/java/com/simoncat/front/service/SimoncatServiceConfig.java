@@ -11,11 +11,6 @@ import com.simoncat.front.dao.SimoncatDaoConfig;
 public class SimoncatServiceConfig {
 
     @Bean
-    public RecommendationDetailService recommendationDetailService() {
-        return new RecommendationDetailServiceImpl();
-    }
-
-    @Bean
     public EssayService essayService() {
         return new EssayServiceImpl();
     }
