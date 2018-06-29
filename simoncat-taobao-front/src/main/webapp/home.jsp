@@ -100,7 +100,7 @@
             </c:choose>
           </c:forEach>
         </div>
-        <a href="#" class="button next">下一页</a>
+        <a href="home.do?page=${essays.getCurrentPage() + 1}" class="button next">下一页</a>
       </div>
     </div>
   </div>
