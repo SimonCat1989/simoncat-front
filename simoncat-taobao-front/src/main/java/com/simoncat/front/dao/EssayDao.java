@@ -7,9 +7,13 @@ import com.simoncat.front.dto.EssayDto;
 
 public interface EssayDao {
 
-	List<EssayDto> loadAll();
+	List<EssayDto> loadAllByCreation();
 
-	List<EssayDto> loadAll(int page);
+	List<EssayDto> loadAllByCreation(int page);
+	
+	List<EssayDto> loadAllByHostest();
+	
+	List<EssayDto> loadAllByHostest(int page);
 	
 	int getTotalCount();
 	

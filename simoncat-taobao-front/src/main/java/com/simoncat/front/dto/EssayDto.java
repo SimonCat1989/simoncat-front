@@ -1,5 +1,6 @@
 package com.simoncat.front.dto;
 
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -36,13 +37,7 @@ public class EssayDto {
     @NonNull
     private String authorAvatar;
     @NonNull
-    private String createMonth;
-    @NonNull
-    private String createMonthSuffix;
-    @NonNull
-    private String createDay;
-    @NonNull
-    private String createYear;
+    private Date createAt;
     @NonNull
     private Integer comment;
     @NonNull
