@@ -1,0 +1,208 @@
+.ticket_wraper {
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px
+		rgba(0, 0, 0, 0.08);
+	transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.ticket-table-recommended {
+	margin-bottom: 0;
+}
+
+.td-ticket-title {
+	padding-left: 60px;
+	width: calc(100% - 280px);
+	padding-left: 60px;
+}
+
+.ticket-title {
+	font-size: 14px;
+	font-weight: 700;
+	color: #333;
+}
+
+.td-ticket-del-price {
+	color: #999;
+	text-decoration: line-through;
+	text-align: center;
+	width: 90px;
+}
+
+.ticket-del-price-prefix {
+	font-style: normal;
+	font-size: 12px;
+	font-family: Arial !important;
+}
+
+.ticket-del-price {
+	font-weight: 400;
+	color: #999;
+}
+
+.td-ticket-current-price {
+	width: 90px;
+	text-align: center;
+}
+
+.ticket-current-price-wraper {
+	color: #f60;
+}
+
+.ticket-current-price-prefix {
+	font-size: 18px;
+	font-style: normal;
+	font-family: Arial !important;
+}
+
+.ticket-current-price {
+	font-size: 18px;
+	color: #f60;
+	font-weight: bold;
+}
+
+.ticket-current-price-suffix {
+	color: #999;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.td-ticket-action {
+	text-align: center;
+	width: 100px;
+}
+
+.ticket-action-wrapper {
+	position: relative;
+	display: inline;
+	width: 75px;
+	padding: 0 25px 15px 0;
+	margin-bottom: -10px;
+}
+
+.ticket-action {
+	color: #333;
+	outline: none;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.ticket-action i {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.ticket-action i.up {
+	border-style: none dashed solid dashed;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent #333 transparent;
+	margin-left: 5px;
+	vertical-align: 2px;
+}
+
+.ticket-table-hairline {
+	box-sizing: border-box;
+	border-top: 1px solid #dbdbdb;
+}
+
+.ticket-table tr td {
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.ticket-table thead tr td {
+	padding: 8px 0;
+	color: #999;
+	background-color: #f3f3f3;
+	border-bottom: 1px solid #dfdfdf;
+	vertical-align: middle;
+}
+
+.ticket-table tbody tr td {
+	border-top: 1px dotted #dadada;
+	vertical-align: middle;
+}
+
+.td-ticket-hairline-provider {
+	width: 140px;
+	border-right: 1px solid #dfdfdf;
+}
+
+.ticket-hairline-provider {
+	padding-left: 80px;
+}
+
+.td-ticket-hairline-name {
+	width: calc(100% - 280px);
+}
+
+.ticket-hairline-name {
+	padding-left: 15px;
+}
+
+.td-ticket-hairline-price {
+	width: 50px;
+}
+
+.td-ticket-hairline-action {
+	width: 90px;
+}
+
+.td-ticket-body-provider {
+	border-right: 1px solid #dfdfdf;
+	vertical-align: top;
+	overflow: hidden;
+	padding: 1px 0 0 1px;
+}
+
+.ticket-body-provider {
+	display: block;
+	padding: 15px 10px 15px 80px;
+	color: #333;
+}
+
+.td-ticket-body-title {
+	padding: 15px 25px 15px 15px;
+}
+
+.ticket-body-title-link {
+	color: #06c;
+	outline: none;
+	text-decoration: none;
+	cursor: auto;
+}
+
+.ticket-body-price {
+	color: #f60;
+}
+
+.ticket-body-price dfn {
+	font-style: normal;
+	font-size: 12px;
+	font-family: Arial !important;
+}
+
+.ticket-body-price span {
+	color: #f60;
+	font-weight: bold;
+}
+
+.ticket-body-action {
+	color: #fff;
+	background-color: #ff8400;
+	box-shadow: 0 1px 1px #ccc;
+	border-radius: 2px;
+	display: inline-block;
+	width: 75px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+	cursor: auto;
+}

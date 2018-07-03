@@ -15,6 +15,7 @@
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 <link rel="stylesheet" href="assets/css/main.css" />
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<link rel="stylesheet" href="css/ticket.css" />
 <link rel="shortcut icon" href="images/icon.ico" />
 </head>
 <body>
@@ -54,6 +55,53 @@
                 </td>
               </tr>
             </table>
+            <div class="ticket_wraper">
+              <table class="ticket-table-recommended">
+                <tbody>
+                  <tr>
+                    <td class="td-ticket-title"><div class="ticket-title">《${data.getBookName()}》</div></td>
+                    <td class="td-ticket-del-price"><div>
+                        <dfn class="ticket-del-price-prefix">¥</dfn>
+                        <span class="ticket-del-price">678</span>
+                      </div></td>
+                    <td class="td-ticket-current-price"><div>
+                        <span class="ticket-current-price-wraper"><dfn class="ticket-current-price-prefix">¥</dfn><span class="ticket-current-price"
+                          data-reactid="281">599</span></span><span class="ticket-current-price-suffix">起</span>
+                      </div></td>
+                    <td class="td-ticket-action"><div class="ticket-action-wrapper">
+                        <a class="ticket-action" href="javascript:void(0);">收起<i class="up"></i>
+                        </a>
+                      </div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="ticket-table">
+                <thead>
+                  <tr>
+                    <td class="td-ticket-hairline-provider"><span class="ticket-hairline-provider">商家名称</span></td>
+                    <td class="td-ticket-hairline-name"><span class="ticket-hairline-name">商品名称</span></td>
+                    <td class="td-ticket-hairline-price">价格</td>
+                    <td class="td-ticket-hairline-action"></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td-ticket-body-provider"><span class="ticket-body-provider">当当网</span></td>
+                    <td class="td-ticket-body-title"><a href="javascript:void(0);" class="ticket-body-title-link">(3.5KM【奇跑9月15日比赛】)</a></td>
+                    <td><span class="ticket-body-price"><dfn>¥</dfn><span>599</span></span></td>
+                    <td><a href="javascript:void(0);" class="ticket-body-action">直达链接</a></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td class="td-ticket-body-provider"><span class="ticket-body-provider">京东</span></td>
+                    <td class="td-ticket-body-title"><a href="javascript:void(0);" class="ticket-body-title-link">(5KM【奇跑9月15日比赛】)</a></td>
+                    <td><span class="ticket-body-price"><dfn>¥</dfn><span>669</span></span></td>
+                    <td><a href="javascript:void(0);" class="ticket-body-action">直达链接</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </c:forEach>
       </article>

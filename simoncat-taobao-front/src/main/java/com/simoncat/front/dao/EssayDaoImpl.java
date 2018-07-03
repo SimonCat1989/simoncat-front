@@ -9,7 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-import com.simoncat.front.dto.BookTypeDto;
 import com.simoncat.front.dto.EssayDto;
 
 @Slf4j
