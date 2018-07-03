@@ -14,7 +14,7 @@ public class EssayDaoImplTest {
 
     @Test
     public void testLoadAll() {
-        List<EssayDto> results = dao.loadAll(1);
+        List<EssayDto> results = dao.loadAllByCreation(1);
         System.out.println(results.get(0).getEssayComments());
         assertTrue(results.size() > 0);
     }

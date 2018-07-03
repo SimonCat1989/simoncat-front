@@ -7,9 +7,9 @@ import com.simoncat.front.vo.SinglePageEssayListVo;
 
 public interface EssayService {
 
-    SinglePageEssayListVo loadAll();
+    SinglePageEssayListVo loadAll(EssayListOrderType type);
 
-    SinglePageEssayListVo loadAll(int page);
+    SinglePageEssayListVo loadAll(EssayListOrderType type, int page);
     
     Optional<EssayVo> loadEssay(long essayId);
 }

@@ -1,5 +1,7 @@
-<div id="sidebar">
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<div id="sidebar">
   <!-- Logo -->
   <h1 id="logo">
     <a href="#">赛门猫一番</a>
@@ -8,10 +10,24 @@
   <!-- Nav -->
   <nav id="nav">
     <ul>
-      <li class="current"><a href="recommendation.do">新鲜速递</a></li>
-      <li><a href="recommendation.do">火爆热门</a></li>
-      <li><a href="recommendation.do">分类排行</a></li>
-      <li><a href="recommendation.do">随便看看</a></li>
+      <c:choose>
+        <c:when test="${sideMenu == 1}">
+          <li class="current"><a href="home.do">新鲜速递</a></li>
+        </c:when>
+        <c:otherwise>
+          <li><a href="home.do">新鲜速递</a></li>
+        </c:otherwise>
+      </c:choose>
+      <c:choose>
+        <c:when test="${sideMenu == 2}">
+          <li class="current"><a href="home/hotest.do">火爆热门</a></li>
+        </c:when>
+        <c:otherwise>
+          <li><a href="home/hotest.do">火爆热门</a></li>
+        </c:otherwise>
+      </c:choose>
+      <!-- <li><a href="recommendation.do">分类排行</a></li>
+      <li><a href="recommendation.do">随便看看</a></li> -->
     </ul>
   </nav>
 
