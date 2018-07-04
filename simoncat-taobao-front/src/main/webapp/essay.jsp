@@ -60,7 +60,6 @@
                 <tbody>
                   <tr>
                     <td class="td-ticket-title"><div class="ticket-title">《${data.getBookName()}》</div></td>
-                    <td class="td-ticket-del-price"></td>
                     <td class="td-ticket-current-price"><div>
                         <span class="ticket-current-price-wraper"><dfn class="ticket-current-price-prefix">¥</dfn><span class="ticket-current-price"
                           data-reactid="281">599</span></span><span class="ticket-current-price-suffix">起</span>
