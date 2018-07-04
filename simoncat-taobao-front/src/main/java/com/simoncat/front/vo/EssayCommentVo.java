@@ -7,6 +7,7 @@ import com.simoncat.front.dto.EssayCommentDto;
 @Getter
 public class EssayCommentVo {
 
+    private final long bookId;
     private final String bookName;
     private final String bookAuthor;
     private final BookTypeVo bookType;
@@ -15,6 +16,7 @@ public class EssayCommentVo {
     private final String comment;
 
     public EssayCommentVo(EssayCommentDto dto) {
+        this.bookId = dto.getBook().getId();
         this.bookName = dto.getBook().getName();
         this.bookAuthor = dto.getBook().getAuthor();
         this.bookType = new BookTypeVo(dto.getBook().getType());

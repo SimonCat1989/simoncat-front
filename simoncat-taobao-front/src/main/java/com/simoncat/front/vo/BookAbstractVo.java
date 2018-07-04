@@ -1,17 +1,19 @@
 package com.simoncat.front.vo;
 
-import lombok.Data;
+import lombok.Getter;
 
 import com.simoncat.front.dto.BookDto;
 
-@Data
+@Getter
 public class BookAbstractVo {
 
-    private String name;
-    private String cover;
-    private String author;
+    private final long id;
+    private final String name;
+    private final String cover;
+    private final String author;
 
     public BookAbstractVo(BookDto dto) {
+        this.id = dto.getId();
         this.name = dto.getName();
         this.cover = dto.getCover();
         this.author = dto.getAuthor();

@@ -1,3 +1,7 @@
+.hidden {
+	display: none;
+}
+
 .ticket_wraper {
 	background-color: #fff;
 	border-radius: 2px;
@@ -31,7 +35,7 @@
 
 .ticket-del-price-prefix {
 	font-style: normal;
-	font-size: 12px;
+	font-size: 18px;
 	font-family: Arial !important;
 }
 
@@ -95,17 +99,23 @@
 	line-height: 0;
 	cursor: pointer;
 	vertical-align: middle;
-}
-
-.ticket-action i.up {
-	border-style: none dashed solid dashed;
-	border-width: 0 5px 5px 5px;
-	border-color: transparent transparent #333 transparent;
 	margin-left: 5px;
 	vertical-align: 2px;
 }
 
-.ticket-table-hairline {
+.ticket-action i.down {
+	border-width: 5px 5px 0 5px;
+	border-style: solid dashed none dashed;
+	border-color: #333 transparent transparent transparent;
+}
+
+.ticket-action i.up {
+	border-width: 0 5px 5px 5px;
+	border-style: none dashed solid dashed;
+    border-color: transparent transparent #333;
+}
+
+.ticket-table {
 	box-sizing: border-box;
 	border-top: 1px solid #dbdbdb;
 }

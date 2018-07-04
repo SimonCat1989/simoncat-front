@@ -69,13 +69,13 @@
                           data-reactid="281">599</span></span><span class="ticket-current-price-suffix">起</span>
                       </div></td>
                     <td class="td-ticket-action"><div class="ticket-action-wrapper">
-                        <a class="ticket-action" href="javascript:void(0);">收起<i class="up"></i>
+                        <a class="ticket-action" data-target="ticket-table-${data.getBookId()}" href="javascript:void(0);">展开<i class="down"></i>
                         </a>
                       </div></td>
                   </tr>
                 </tbody>
               </table>
-              <table class="ticket-table">
+              <table id="ticket-table-${data.getBookId()}" class="ticket-table hidden">
                 <thead>
                   <tr>
                     <td class="td-ticket-hairline-provider"><span class="ticket-hairline-provider">商家名称</span></td>
@@ -116,6 +116,6 @@
   <script src="assets/js/util.js"></script>
   <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
   <script src="assets/js/main.js"></script>
-
+  <script src="js/essay.js"></script>
 </body>
 </html>
