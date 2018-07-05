@@ -19,6 +19,8 @@ import org.json.simple.parser.ParseException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.simoncat.front.dto.BookDto;
+import com.simoncat.front.dto.BookPriceDto;
+import com.simoncat.front.dto.BookSellerDto;
 import com.simoncat.front.dto.BookTypeDto;
 import com.simoncat.front.dto.EssayCommentDto;
 import com.simoncat.front.dto.EssayDto;
@@ -39,15 +41,33 @@ public class InitDatabase {
 									JSONObject json = (JSONObject) bookTypeJson;
 									return BookTypeDto.of((String) json.get("type"));
 								}));
-
-		Map<String, BookDto> bookList = (Map<String, BookDto>) ((JSONArray) parser.parse(
-				new FileReader(Paths.get(InitDatabase.class.getResource("/").getPath(), "assets", "book.json").toFile())))
-						.stream().map(bookJson -> {
-							JSONObject json = (JSONObject) bookJson;
-							return BookDto.of((String) json.get("name"), (String) json.get("author"),
-									bookTypeList.get(json.get("type")), (String) json.get("cover"),
-									(String) json.get("description"));
-						}).collect(Collectors.toMap(BookDto::getName, dto -> dto));
+		
+		Map<Long, BookSellerDto> bookSellerList = (Map<Long, BookSellerDto>) ((JSONArray) parser.parse(new FileReader(
+                Paths.get(InitDatabase.class.getResource("/").getPath(), "assets", "book_seller.json").toFile()))).stream()
+                        .collect(Collectors.toMap(bookSellerJson -> (long) ((JSONObject) bookSellerJson).get("id"),
+                                bookSellerJson -> {
+                                    JSONObject json = (JSONObject) bookSellerJson;
+                                    return BookSellerDto.of((String) json.get("name"));
+                                }));
+		
+        Map<String, BookDto> bookList = (Map<String, BookDto>) ((JSONArray) parser.parse(new FileReader(Paths.get(
+                InitDatabase.class.getResource("/").getPath(), "assets", "book.json").toFile())))
+                .stream()
+                .map(bookJson -> {
+                    JSONObject json = (JSONObject) bookJson;
+                    BookDto dto = BookDto.of((String) json.get("name"), (String) json.get("author"),
+                            bookTypeList.get(json.get("type")), (String) json.get("cover"),
+                            (String) json.get("description"));
+                    dto.setPrices((Set<BookPriceDto>) ((JSONArray) json.get("prices"))
+                            .stream()
+                            .map(jsonPrice -> {
+                                JSONObject jsonPriceObj = (JSONObject) jsonPrice;
+                                return BookPriceDto.of(bookSellerList.get(jsonPriceObj.get("seller")),
+                                        (String) jsonPriceObj.get("advertisement"), (Double) jsonPriceObj.get("price"),
+                                        (String) jsonPriceObj.get("link"), dto);
+                            }).collect(Collectors.toSet()));
+                    return dto;
+                }).collect(Collectors.toMap(BookDto::getName, dto -> dto));
 
 		Set<EssayDto> EssayList = (Set<EssayDto>) ((JSONArray) parser.parse(new FileReader(
 				Paths.get(InitDatabase.class.getResource("/").getPath(), "assets", "recommend.json").toFile()))).stream()
@@ -84,6 +104,9 @@ public class InitDatabase {
 		bookTypeList.values().stream().forEach(dto -> {
 			session.saveOrUpdate(dto);
 		});
+		bookSellerList.values().stream().forEach(dto -> {
+            session.saveOrUpdate(dto);
+        });
 		bookList.values().stream().forEach(dto -> {
 			session.saveOrUpdate(dto);
 		});

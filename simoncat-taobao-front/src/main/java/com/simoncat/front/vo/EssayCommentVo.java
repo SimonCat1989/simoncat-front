@@ -1,5 +1,8 @@
 package com.simoncat.front.vo;
 
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import lombok.Getter;
 
 import com.simoncat.front.dto.EssayCommentDto;
@@ -13,6 +16,7 @@ public class EssayCommentVo {
     private final BookTypeVo bookType;
     private final String bookCover;
     private final String bookDescription;
+    private final Set<BookPriceVo> bookPrices;
     private final String comment;
 
     public EssayCommentVo(EssayCommentDto dto) {
@@ -22,6 +26,7 @@ public class EssayCommentVo {
         this.bookType = new BookTypeVo(dto.getBook().getType());
         this.bookCover = dto.getBook().getCover();
         this.bookDescription = dto.getBook().getDescription();
+        this.bookPrices = dto.getBook().getPrices().stream().map(BookPriceVo::new).collect(Collectors.toSet());
         this.comment = dto.getComment();
     }
 }

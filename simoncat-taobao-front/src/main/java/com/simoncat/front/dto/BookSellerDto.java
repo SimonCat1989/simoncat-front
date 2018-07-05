@@ -15,12 +15,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor(staticName = "of")
 @Getter
 @Entity
-@Table(name = "book_type")
-public class BookTypeDto {
+@Table(name = "book_seller")
+public class BookSellerDto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    
     @NonNull
-    private String type;
+    private String name;
 }

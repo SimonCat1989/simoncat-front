@@ -21,7 +21,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @RequiredArgsConstructor(staticName = "of")
 @Getter
-@Setter
 @Entity
 @Table(name = "essay")
 public class EssayDto {
@@ -52,5 +51,6 @@ public class EssayDto {
     private String description;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "essayCommentId.essay", cascade = CascadeType.ALL)
+    @Setter
     private Set<EssayCommentDto> essayComments;
 }
