@@ -2,7 +2,7 @@
   <article class="box post post-excerpt">
     <header>
       <h2>
-        <a href="essay.do?essayId=${data.getId()}" target="view_window">${data.getTitle()}</a>
+        <a href="essay.do?essayId=${data.getId()}" target="_blank">${data.getTitle()}</a>
       </h2>
       <p>
         <img src="${data.getAuthorAvatar()}" />${data.getAuthor()}
@@ -45,7 +45,7 @@
       <strong>${data.getKeyword()}</strong> ${data.getDescription()}
     </p>
     <p>
-      <a href="essay.do?essayId=${data.getId()}" target="view_window"><span
+      <a href="essay.do?essayId=${data.getId()}" target="_blank"><span
         class="contentForAll">查看全文</span></a>
     </p>
   </article>

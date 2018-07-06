@@ -1,4 +1,4 @@
-package com.simoncat.front.dao;
+package com.simoncat.front.utils;
 
 import java.io.FileReader;
 import java.io.IOException;

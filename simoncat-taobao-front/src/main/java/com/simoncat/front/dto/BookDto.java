@@ -14,12 +14,15 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+@NoArgsConstructor
 @RequiredArgsConstructor(staticName = "of")
 @Getter
+@Setter
 @Entity
 @Table(name = "book")
 public class BookDto {
@@ -44,10 +47,8 @@ public class BookDto {
     private String description;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "essayCommentId.book")
-    @Setter
     private Set<EssayCommentDto> comments;
     
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "book")
-    @Setter
     private Set<BookPriceDto> prices;
 }

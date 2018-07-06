@@ -1,5 +1,7 @@
 package com.simoncat.front.dto;
 
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,10 +16,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @RequiredArgsConstructor(staticName = "of")
 @Getter
+@Setter
 @Entity
 @Table(name = "book_price")
 public class BookPriceDto {
@@ -27,7 +31,7 @@ public class BookPriceDto {
     private long id;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "type_id")
+    @JoinColumn(name = "seller_id")
     @NonNull
     private BookSellerDto seller;
     

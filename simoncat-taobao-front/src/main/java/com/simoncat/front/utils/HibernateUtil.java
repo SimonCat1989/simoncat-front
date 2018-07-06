@@ -1,9 +1,9 @@
-package com.simoncat.front.dao;
+package com.simoncat.front.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-final class HibernateUtil {
+public final class HibernateUtil {
 
     private static final SessionFactory sessionFactory = buildSessionFactory();
 

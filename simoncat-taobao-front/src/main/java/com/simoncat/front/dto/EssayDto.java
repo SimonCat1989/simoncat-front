@@ -21,6 +21,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @RequiredArgsConstructor(staticName = "of")
 @Getter
+@Setter
 @Entity
 @Table(name = "essay")
 public class EssayDto {

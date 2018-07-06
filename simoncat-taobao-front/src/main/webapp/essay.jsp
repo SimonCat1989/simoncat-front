@@ -61,8 +61,8 @@
                   <tr>
                     <td class="td-ticket-title"><div class="ticket-title">《${data.getBookName()}》</div></td>
                     <td class="td-ticket-current-price"><div>
-                        <span class="ticket-current-price-wraper"><dfn class="ticket-current-price-prefix">¥</dfn><span class="ticket-current-price"
-                          data-reactid="281">599</span></span><span class="ticket-current-price-suffix">起</span>
+                        <span class="ticket-current-price-wraper"> <dfn class="ticket-current-price-prefix">¥</dfn> <span class="ticket-current-price">${data.getBookCheapestPrice()}</span></span><span
+                          class="ticket-current-price-suffix">起</span>
                       </div></td>
                     <td class="td-ticket-action"><div class="ticket-action-wrapper">
                         <a class="ticket-action" data-target="ticket-table-${data.getBookId()}" href="javascript:void(0);">展开<i class="down"></i>
@@ -80,22 +80,16 @@
                     <td class="td-ticket-hairline-action"></td>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td class="td-ticket-body-provider"><span class="ticket-body-provider">当当网</span></td>
-                    <td class="td-ticket-body-title"><a href="javascript:void(0);" class="ticket-body-title-link">(3.5KM【奇跑9月15日比赛】)</a></td>
-                    <td><span class="ticket-body-price"><dfn>¥</dfn><span>599</span></span></td>
-                    <td><a href="javascript:void(0);" class="ticket-body-action">直达链接</a></td>
-                  </tr>
-                </tbody>
-                <tbody>
-                  <tr>
-                    <td class="td-ticket-body-provider"><span class="ticket-body-provider">京东</span></td>
-                    <td class="td-ticket-body-title"><a href="javascript:void(0);" class="ticket-body-title-link">(5KM【奇跑9月15日比赛】)</a></td>
-                    <td><span class="ticket-body-price"><dfn>¥</dfn><span>669</span></span></td>
-                    <td><a href="javascript:void(0);" class="ticket-body-action">直达链接</a></td>
-                  </tr>
-                </tbody>
+                <c:forEach items="${data.getBookPrices()}" var="price">
+                  <tbody>
+                    <tr>
+                      <td class="td-ticket-body-provider"><span class="ticket-body-provider">${price.getSeller().getName()}</span></td>
+                      <td class="td-ticket-body-title"><a href="${price.getLink()}" target="_blank" class="ticket-body-title-link">${price.getAdvertisement()}</a></td>
+                      <td><span class="ticket-body-price"><dfn>¥</dfn><span>${price.getPrice()}</span></span></td>
+                      <td><a href="${price.getLink()}" target="_blank" class="ticket-body-action">直达链接</a></td>
+                    </tr>
+                  </tbody>
+                </c:forEach>
               </table>
             </div>
           </div>

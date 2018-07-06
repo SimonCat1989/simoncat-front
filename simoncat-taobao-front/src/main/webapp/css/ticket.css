@@ -154,8 +154,9 @@
 
 .ticket-body-provider {
 	display: block;
-	padding: 15px 10px 15px 80px;
+	padding: 15px 10px 15px 0px;
 	color: #333;
+	text-align: right;
 }
 
 .td-ticket-body-title {

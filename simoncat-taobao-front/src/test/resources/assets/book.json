@@ -157,9 +157,34 @@
 	"prices":[
 	{
 		"seller": 1,
-		"advertisement":"肆意挥洒激情的游戏人生，打破现实框架的无尽幻想！",
-		"price":206.54,
-		"link":"https://book.qidian.com/info/1693876"
+		"advertisement":"经典之作签到签到签到。",
+		"price":9.99,
+		"link":"https://book.qidian.com/info/1003762962"
+	},{
+		"seller": 5,
+		"advertisement":"人是为活着本身而活着的，而不是为了活着之外的任何事物所活着。",
+		"price":9.99,
+		"link":"https://read.douban.com/ebook/30541512/?dcs=subject-buylink&dcm=douban&dct=27064488"
+	},{
+		"seller": 8,
+		"advertisement":"Prime会员专享 Kindle电子书售价5折",
+		"price":4.99,
+		"link":"https://www.amazon.cn/mn/detailApp/ref=asc_df_B074V4T73Q2967563/?asin=B074V4T73Q&tag=douban_kindle-23&creative=2384&creativeASIN=B074V4T73Q&linkCode=df0"
+	},{
+		"seller": 6,
+		"advertisement":"25周年精装典藏纪念版(全新水墨封面，全新审校修订，带你重新读懂“活着”的力量)",
+		"price":27.10,
+		"link":"https://item.jd.com/12093747.html?cu=true&utm_source=book.douban.com&utm_medium=tuiguang&utm_campaign=t_15055_&utm_term=3a29270060d44952bfbe59519acb2d95"
+	},{
+		"seller": 3,
+		"advertisement":"活着（精装版，余华代表作，25周年特别修订）易烊千玺推荐阅读版本。身处荒诞的世界，每个人都该读读余华。",
+		"price":27.10,
+		"link":"http://product.dangdang.com/25092039.html"
+	},{
+		"seller": 7,
+		"advertisement":"活着（简裝本）",
+		"price":25.60,
+		"link":"http://www.bookschina.com/7525593.htm"
 	}
 	],
 	"description":"地主少爷福贵嗜赌成性，终于赌光了家业一贫如洗，穷困之中的福贵因为母亲生病前去求医，没想到半路上被国民党部队抓了壮丁，后被解放军所俘虏，回到家乡他才知道母亲已经去世，妻子家珍含辛茹苦带大了一双儿女，但女儿不幸变成了聋哑人，儿子机灵活泼……<br /><br />然而，真正的悲剧从此才开始渐次上演，每读一页，都让我们止不住泪湿双眼，因为生命里难得的温情将被一次次死亡撕扯得粉碎，只剩得老了的福贵伴随着一头老牛在阳光下回忆。"
@@ -171,10 +196,20 @@
 	"cover":"data/books/12.jpg",
 	"prices":[
 	{
-		"seller": 1,
-		"advertisement":"肆意挥洒激情的游戏人生，打破现实框架的无尽幻想！",
-		"price":206.54,
-		"link":"https://book.qidian.com/info/1693876"
+		"seller": 4,
+		"advertisement":"百年孤独(根据马尔克斯指定版本翻译,未做任何增删) 精装",
+		"price":29.60,
+		"link":"https://www.amazon.cn/mn/detailApp/ref=asc_df_B0052IGZFO2967561/?asin=B0052IGZFO&tag=douban-23&creative=2384&creativeASIN=B0052IGZFO&linkCode=df0"
+	},{
+		"seller": 6,
+		"advertisement":"百年孤独(加西亚·马尔克斯代表作，中文版首次授权！未作任何删节！)",
+		"price":29.60,
+		"link":"https://item.jd.com/10658646.html?cu=true&utm_source=book.douban.com&utm_medium=tuiguang&utm_campaign=t_15055_&utm_term=83cc41d171644150b93bf9a4594f8793"
+	},{
+		"seller": 7,
+		"advertisement":"百年孤独(简裝本)",
+		"price":30.80,
+		"link":"http://www.bookschina.com/5163086.htm"
 	}
 	],
 	"description":"《百年孤独》是魔幻现实主义文学的代表作，描写了布恩迪亚家族七代人的传奇故事，以及加勒比海沿岸小镇马孔多的百年兴衰，反映了拉丁美洲一个世纪以来风云变幻的历史。作品融入神话传说、民间故事、宗教典故等神秘因素，巧妙地糅合了现实与虚幻，展现出一个瑰丽的想象世界，成为20世纪最重要的经典文学巨著之一。1982年加西亚·马尔克斯获得诺贝尔文学奖，奠定世界级文学大师的地位，很大程度上乃是凭借《百年孤独》的巨大影响。"
@@ -186,10 +221,15 @@
 	"cover":"data/books/13.jpg",
 	"prices":[
 	{
-		"seller": 1,
-		"advertisement":"肆意挥洒激情的游戏人生，打破现实框架的无尽幻想！",
-		"price":206.54,
-		"link":"https://book.qidian.com/info/1693876"
+		"seller": 6,
+		"advertisement":"平凡的世界（套装全3册, 茅盾文学奖皇冠上的明珠 激励千万青年的不朽经典 颇受老师和学生喜爱的新课标必读书）",
+		"price":51.00,
+		"link":"https://item.jd.com/10004374.html?cu=true&utm_source=book.douban.com&utm_medium=tuiguang&utm_campaign=t_15055_&utm_term=1c4893c94ff24fda824c9ea00674a86a"
+	},{
+		"seller": 7,
+		"advertisement":"平凡的世界 第二部",
+		"price":13.00,
+		"link":"http://www.bookschina.com/7234485.htm"
 	}
 	],
 	"description":"《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩了中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会各阶层众多普通人的形象。劳动与爱情，挫折与追求，痛苦与欢乐，日常生活与巨大社会冲突，纷繁地交织在一起，深刻地展示了普通人在大时代历史进程中所走过的艰难曲折的道路。"
@@ -201,10 +241,20 @@
 	"cover":"data/books/14.jpg",
 	"prices":[
 	{
-		"seller": 1,
-		"advertisement":"肆意挥洒激情的游戏人生，打破现实框架的无尽幻想！",
-		"price":206.54,
-		"link":"https://book.qidian.com/info/1693876"
+		"seller": 5,
+		"advertisement":"哈利·波特与魔法石（中文翻译版）",
+		"price":9.90,
+		"link":"https://read.douban.com/ebook/23527600/?dcs=subject-buylink&dcm=douban&dct=1041007"
+	},{
+		"seller": 6,
+		"advertisement":"哈利波特（1）：神秘的魔法石（读书消长夏，暑期学霸进阶宝典来袭！自营好书每满100减40，中小学教辅品类每满79减30！）",
+		"price":134.70,
+		"link":"https://item.jd.com/16017482.html?cu=true&utm_source=book.douban.com&utm_medium=tuiguang&utm_campaign=t_15055_&utm_term=6265d354c9f44e5b8ae3f429adcc873b"
+	},{
+		"seller": 6,
+		"advertisement":"Harry Potter and the Sorcerer's Stone 哈利·波特与魔法石 英文原版 [平装] [9岁及以上]",
+		"price":65.70,
+		"link":"https://item.jd.com/19000448.html?cu=true&utm_source=book.douban.com&utm_medium=tuiguang&utm_campaign=t_15055_&utm_term=d15b2693ed664601b266a915798ff119"
 	}
 	],
 	"description":"一岁的哈利·波特失去父母后，神秘地出现在姨父姨妈家的门前。哈利在姨父家饱受欺凌，度过十年极其痛苦的日子。姨父和姨妈好似凶神恶煞，他们那混世魔王儿子达力——一个肥胖、娇惯、欺负人的大块头，更是经济对哈利拳脚相加。哈利的“房间”是位于楼梯口的一个又暗又小的碗橱。十年来，从来没有人为他过过生日。<br /><br />但是在他十一岁生日那天，一切都发生了变化，信使猫头鹰带来了一封神秘的信：邀请哈利去一个他——以及所有读到哈利故事的人——会觉得望远难忘的、不可思议的地方——霍格沃茨魔法学校。<br /><br />在魔法学校，哈利不仅找着了朋友，学会了空中飞行，骑着一把型号为光轮2000的飞天扫帚打魁地奇球，还得到了一件隐形衣。他发现那里的一切——从上课到吃饭到睡觉都充满了魔力，但是一块魔石出现，它与哈利的命运息息相关……"
@@ -216,10 +266,20 @@
 	"cover":"data/books/15.jpg",
 	"prices":[
 	{
-		"seller": 1,
-		"advertisement":"肆意挥洒激情的游戏人生，打破现实框架的无尽幻想！",
-		"price":206.54,
-		"link":"https://book.qidian.com/info/1693876"
+		"seller": 5,
+		"advertisement":"飘（上、下，企鹅经典丛书第四辑）",
+		"price":9.99,
+		"link":"https://read.douban.com/ebook/25510878/?dcs=subject-buylink&dcm=douban&dct=1068920"
+	},{
+		"seller": 4,
+		"advertisement":"飘(傅东华译本)(精装)",
+		"price":33.32,
+		"link":"https://www.amazon.cn/mn/detailApp/ref=asc_df_B0017TS3IY2967124/?asin=B0017TS3IY&tag=douban-23&creative=2384&creativeASIN=B0017TS3IY&linkCode=df0"
+	},{
+		"seller": 7,
+		"advertisement":"飘（长江文艺出版社）",
+		"price":27.30,
+		"link":"http://www.bookschina.com/4360178.htm"
 	}
 	],
 	"description":"小说中的故事发生在1861年美国南北战争前夕。生活在南方的少女郝思嘉从小深受南方文化传统的熏陶，可在她的血液里却流淌着野性的叛逆因素。随着战火的蔓廷和生活环境的恶化，郝思嘉的叛逆个性越来越丰满，越鲜明，在一系列的的挫折中她改造了自我，改变了个人甚至整个家族的命运，成为时代时势造就的新女性的形象。<br /><br />作品在描绘人物生活与爱情的同时，勾勒出南北双方在政治，经济，文化各个层次的异同，具有浓厚的史诗风格，堪称美国历史转折时期的真实写照，同时也成为历久不衰的爱情经典。"
@@ -1402,9 +1462,9 @@
 	"prices":[
 	{
 		"seller": 1,
-		"advertisement":"肆意挥洒激情的游戏人生，打破现实框架的无尽幻想！",
-		"price":206.54,
-		"link":"https://book.qidian.com/info/1693876"
+		"advertisement":"算命探险点风水，惊悚侦探降鬼怪，最传统中国文化，最神秘灵异传奇！",
+		"price":30.56,
+		"link":"https://book.qidian.com/info/1011335417"
 	}
 	],
 	"description":"一家只在深夜开门营业的书屋，欢迎您的光临。"
