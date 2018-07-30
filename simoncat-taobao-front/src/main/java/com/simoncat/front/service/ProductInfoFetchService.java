@@ -1,8 +1,10 @@
 package com.simoncat.front.service;
 
+import java.util.Set;
+
 import com.simoncat.front.vo.ProductInfoVo;
 
 public interface ProductInfoFetchService {
 
-    ProductInfoVo fetch(String keyword);
+    Set<ProductInfoVo> fetch(String keyword);
 }

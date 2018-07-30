@@ -1,5 +1,6 @@
 package com.simoncat.front.controller;
 
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,12 +28,12 @@ public class LoginController {
 			@Override
 			public void run() {
 				// 保存登陆二维码图片的路径
-				String qrPath = Paths.get(request.getServletContext().getRealPath("/"), "qrcode").normalize()
-						.toString();
+				Path qrPath = Paths.get(request.getServletContext().getRealPath("/"), "qrcode").normalize();
+				qrPath.toFile().mkdirs();
 				// 实现IMsgHandlerFace接口的类
 				IMsgHandlerFace msgHandler = new MsgHandler();
 				// 【注入】
-				Wechat wechat = new Wechat(msgHandler, qrPath);
+				Wechat wechat = new Wechat(msgHandler, qrPath.toString());
 				// 启动服务，会在qrPath下生成一张二维码图片，扫描即可登陆，
 				// 注意，二维码图片如果超过一定时间未扫描会过期，过期时会自动更新，所以你可能需要重新打开图片
 				wechat.start();

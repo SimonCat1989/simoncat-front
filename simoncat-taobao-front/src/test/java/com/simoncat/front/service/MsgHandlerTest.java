@@ -14,7 +14,7 @@ public class MsgHandlerTest {
 	public void testTextMsgHandle() {
 		BaseMsg msg = new BaseMsg();
 		msg.setText(INCOMMING_MESSAGE);
-		String result = handler.textMsgHandle(msg);
+		Object result = handler.textMsgHandle(msg);
 		System.out.println(result);
 	}
 

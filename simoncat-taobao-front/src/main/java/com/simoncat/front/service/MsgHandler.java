@@ -3,13 +3,16 @@ package com.simoncat.front.service;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.simoncat.front.vo.ProductInfoVo;
 
 import cn.zhouyafeng.itchat4j.api.MessageTools;
 import cn.zhouyafeng.itchat4j.beans.BaseMsg;
+import cn.zhouyafeng.itchat4j.beans.LinkMsg;
 import cn.zhouyafeng.itchat4j.beans.RecommendInfo;
 import cn.zhouyafeng.itchat4j.face.IMsgHandlerFace;
 import cn.zhouyafeng.itchat4j.utils.enums.MsgTypeEnum;
@@ -20,10 +23,11 @@ import lombok.extern.slf4j.Slf4j;
 public class MsgHandler implements IMsgHandlerFace {
 
 	private static final String RESOURCE_FOLDER = MsgHandler.class.getResource("/").getPath();
-	private static final String TAOBAO_TOKEN_PATTEN = "￥";
+
+	private static final ProductInfoFetchService service = new ProductInfoFetchServiceImpl();
 
 	@Override
-	public String textMsgHandle(BaseMsg msg) {
+	public Object textMsgHandle(BaseMsg msg) {
 		String text = msg.getText();
 
 		switch (text) {
@@ -33,15 +37,17 @@ public class MsgHandler implements IMsgHandlerFace {
 			return createUserMessage("0", "0", "0", "0", "0", "0", "0", "0", "0", "0");
 		}
 		default: {
-			// Extract Taobao token
-			String itemName = text.substring(text.indexOf("【"), text.lastIndexOf("】") + 1);
-			String token = text.substring(text.indexOf(TAOBAO_TOKEN_PATTEN), text.lastIndexOf(TAOBAO_TOKEN_PATTEN) + 1);
-			if (StringUtils.isAnyBlank(itemName, token)) {
-				return StringUtils.EMPTY;
+			// Confirm it is Taobao Token keyword
+			if (text.contains("【") && text.contains("】") && (text.contains("€") || text.contains("￥"))) {
+				// Extract Taobao token
+				Set<ProductInfoVo> results = service.fetch(text);
+				ProductInfoVo vo = results.stream().findFirst().get();
+				return createTaobaoItemMessage(vo.getTitle(), vo.getOriginalPrice().toPlainString(),
+						vo.getPrice().toPlainString(), vo.getRebateForCustomer().toPlainString(),
+						StringUtils.isBlank(vo.getCouponInfo()) ? "没有优惠券" : vo.getCouponInfo(),
+						"http://www.simoncat.top/index.do?token=" + vo.getToken());
 			}
-			// Use taobao token to get item information
-			// mock
-			return createTaobaoItemMessage(itemName, "400.00", "380.00", "1.60", "20.00", "http://www.baidu.com");
+			return new LinkMsg("http://www.baidu.com", "拉夏贝尔短裙2018夏装新款收腰百褶a字裙雪纺碎花chic半身裙子女","装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙");
 		}
 		}
 	}
@@ -157,7 +163,7 @@ public class MsgHandler implements IMsgHandlerFace {
 
 		result.append("优惠金额：");
 		result.append(discount);
-		result.append("元优惠卷\n");
+		result.append("\n");
 
 		result.append("返利链接：");
 		result.append(url);
