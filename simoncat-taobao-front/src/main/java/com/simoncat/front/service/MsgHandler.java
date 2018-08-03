@@ -1,28 +1,22 @@
 package com.simoncat.front.service;
 
-import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Set;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.apache.commons.lang3.StringUtils;
+
+import cn.zhouyafeng.itchat4j.beans.BaseMsg;
+import cn.zhouyafeng.itchat4j.beans.LinkMsg;
+import cn.zhouyafeng.itchat4j.face.IMsgHandlerFace;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.simoncat.front.vo.ProductInfoVo;
 
-import cn.zhouyafeng.itchat4j.api.MessageTools;
-import cn.zhouyafeng.itchat4j.beans.BaseMsg;
-import cn.zhouyafeng.itchat4j.beans.LinkMsg;
-import cn.zhouyafeng.itchat4j.beans.RecommendInfo;
-import cn.zhouyafeng.itchat4j.face.IMsgHandlerFace;
-import cn.zhouyafeng.itchat4j.utils.enums.MsgTypeEnum;
-import cn.zhouyafeng.itchat4j.utils.tools.DownloadTools;
-import lombok.extern.slf4j.Slf4j;
-
 @Slf4j
 public class MsgHandler implements IMsgHandlerFace {
 
-	private static final String RESOURCE_FOLDER = MsgHandler.class.getResource("/").getPath();
+//	private static final String RESOURCE_FOLDER = MsgHandler.class.getResource("/").getPath();
 
 	private static final ProductInfoFetchService service = new ProductInfoFetchServiceImpl();
 
@@ -46,48 +40,54 @@ public class MsgHandler implements IMsgHandlerFace {
 						vo.getPrice().toPlainString(), vo.getRebateForCustomer().toPlainString(),
 						StringUtils.isBlank(vo.getCouponInfo()) ? "没有优惠券" : vo.getCouponInfo(),
 						"http://www.simoncat.top/index.do?token=" + vo.getToken());
+			} else if(text.startsWith("qqqqqqqqq")){
+				return new LinkMsg("http://www.baidu.com", "拉夏贝尔短裙2018夏装新款收腰百褶a字裙雪纺碎花chic半身裙子女","装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙");
 			}
-			return new LinkMsg("http://www.baidu.com", "拉夏贝尔短裙2018夏装新款收腰百褶a字裙雪纺碎花chic半身裙子女","装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙");
+			return "";
 		}
 		}
 	}
 
 	@Override
 	public String picMsgHandle(BaseMsg msg) {
-		// 这里使用收到图片的时间作为文件名
-		String fileName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date()) + ".jpg";
-		// 保存图片的路径
-		String picPath = Paths.get(RESOURCE_FOLDER, "picture", fileName).normalize().toString();
-		// 调用此方法来保存图片
-		DownloadTools.getDownloadFn(msg, MsgTypeEnum.PIC.getType(), picPath);
-		return "图片保存成功";
+//		// 这里使用收到图片的时间作为文件名
+//		String fileName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date()) + ".jpg";
+//		// 保存图片的路径
+//		String picPath = Paths.get(RESOURCE_FOLDER, "picture", fileName).normalize().toString();
+//		// 调用此方法来保存图片
+//		DownloadTools.getDownloadFn(msg, MsgTypeEnum.PIC.getType(), picPath);
+//		return "图片保存成功";
+		return "";
 	}
 
 	@Override
 	public String voiceMsgHandle(BaseMsg msg) {
-		// 这里使用收到语音的时间作为文件名
-		String fileName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date()) + ".mp3";
-		// 保存语音的路径
-		String voicePath = Paths.get(RESOURCE_FOLDER, "voice", fileName).normalize().toString();
-		// 调用此方法来保存语音
-		DownloadTools.getDownloadFn(msg, MsgTypeEnum.VOICE.getType(), voicePath);
-		return "声音保存成功";
+//		// 这里使用收到语音的时间作为文件名
+//		String fileName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date()) + ".mp3";
+//		// 保存语音的路径
+//		String voicePath = Paths.get(RESOURCE_FOLDER, "voice", fileName).normalize().toString();
+//		// 调用此方法来保存语音
+//		DownloadTools.getDownloadFn(msg, MsgTypeEnum.VOICE.getType(), voicePath);
+//		return "声音保存成功";
+		return "";
 	}
 
 	@Override
 	public String viedoMsgHandle(BaseMsg msg) {
-		// 这里使用收到小视频的时间作为文件名
-		String fileName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date()) + ".mp4";
-		// 保存小视频的路径
-		String viedoPath = Paths.get(RESOURCE_FOLDER, "video", fileName).normalize().toString();
-		// 调用此方法来保存小视频
-		DownloadTools.getDownloadFn(msg, MsgTypeEnum.VIEDO.getType(), viedoPath);
-		return "视频保存成功";
+//		// 这里使用收到小视频的时间作为文件名
+//		String fileName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date()) + ".mp4";
+//		// 保存小视频的路径
+//		String viedoPath = Paths.get(RESOURCE_FOLDER, "video", fileName).normalize().toString();
+//		// 调用此方法来保存小视频
+//		DownloadTools.getDownloadFn(msg, MsgTypeEnum.VIEDO.getType(), viedoPath);
+//		return "视频保存成功";
+		return "";
 	}
 
 	@Override
 	public String nameCardMsgHandle(BaseMsg msg) {
-		return "收到名片消息";
+//		return "收到名片消息";
+		return "";
 	}
 
 	@Override
@@ -99,13 +99,14 @@ public class MsgHandler implements IMsgHandlerFace {
 
 	@Override
 	public String verifyAddFriendMsgHandle(BaseMsg msg) {
-		// 同意好友请求，false为不接受好友请求
-		MessageTools.addFriend(msg, true);
-		RecommendInfo recommendInfo = msg.getRecommendInfo();
-		String nickName = recommendInfo.getNickName();
-		String province = recommendInfo.getProvince();
-		String city = recommendInfo.getCity();
-		return createWelcomeMessage(city, province, nickName);
+//		// 同意好友请求，false为不接受好友请求
+//		MessageTools.addFriend(msg, true);
+//		RecommendInfo recommendInfo = msg.getRecommendInfo();
+//		String nickName = recommendInfo.getNickName();
+//		String province = recommendInfo.getProvince();
+//		String city = recommendInfo.getCity();
+//		return createWelcomeMessage(city, province, nickName);
+		return "";
 	}
 
 	@VisibleForTesting

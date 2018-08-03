@@ -1,10 +1,13 @@
 package com.simoncat.front.service;
 
+import java.net.URLEncoder;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.utils.URIBuilder;
 
 import com.google.common.collect.Sets;
 import com.simoncat.front.vo.ProductInfoVo;
@@ -86,18 +89,32 @@ public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
 		TbkTpwdCreateResponse rsp = client.execute(req);
 		if (StringUtils.isBlank(rsp.getErrorCode())) {
 			String token = rsp.getData().getModel();
-			return new ProductInfoVo(data.getTitle(), data.getPictUrl(), token, data.getCommissionRate(),
-					data.getReservePrice(), data.getZkFinalPrice(), data.getCouponInfo(), data.getCouponRemainCount());
+			return new ProductInfoVo(data.getTitle(), data.getPictUrl(), token,
+					data.getCommissionRate(), data.getReservePrice(),
+					data.getZkFinalPrice(), data.getCouponInfo(),
+					data.getCouponRemainCount(), generateShortUrl(token,
+							data.getPictUrl()));
 		}
 		return null;
 	}
+	
+	// 可以自定义生成 MD5 加密字符传前的混合 KEY
+    String key = UUID.randomUUID().toString();
+	
+	private String generateShortUrl(String token, String picUrl) {
+		String oldUrl = URLEncoder.encode("http://www.simoncat.top/index.do?token=" + token); 
+		return ParameterEncoder.encode(oldUrl);
+	}
 
 	public static void main(String[] args) {
-		String keyword = "【韩国潮牌Flipper萌水果猫爪棒球帽子男女鸭舌帽少女粉色旅游遮阳】http://m.tb.cn/h.3c9uqJS 点击链接，再选择浏览器咑閞；或復·制这段描述€kZdqbaYUWi6€后到淘♂寳♀";
+//		String keyword = "【韩国潮牌Flipper萌水果猫爪棒球帽子男女鸭舌帽少女粉色旅游遮阳】http://m.tb.cn/h.3c9uqJS 点击链接，再选择浏览器咑閞；或復·制这段描述€kZdqbaYUWi6€后到淘♂寳♀";
 		ProductInfoFetchServiceImpl mock = new ProductInfoFetchServiceImpl();
-		Set<ProductInfoVo> results = mock.fetch(keyword);
-		results.stream().forEach(res -> {
-			System.out.println(res.toString());
-		});
+//		Set<ProductInfoVo> results = mock.fetch(keyword);
+//		results.stream().forEach(res -> {
+//			System.out.println(res.toString());
+//		});
+		
+		System.out.println(mock.generateShortUrl("523423423", "hsd"));
+		
 	}
 }

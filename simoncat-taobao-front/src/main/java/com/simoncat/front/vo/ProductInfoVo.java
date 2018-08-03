@@ -22,9 +22,10 @@ public class ProductInfoVo {
 	private BigDecimal price;
 	private String couponInfo;
 	private Long couponRemainCount;
+	private String shortUrl;
 
 	public ProductInfoVo(String title, String pictureUrl, String token, String rebateRate, String originalPrice,
-			String price, String couponInfo, Long couponRemainCount) {
+			String price, String couponInfo, Long couponRemainCount, String shortUrl) {
 		this.title = title;
 		this.pictureUrl = pictureUrl;
 		this.token = token;
@@ -35,5 +36,6 @@ public class ProductInfoVo {
 		this.couponRemainCount = couponRemainCount;
 		this.rebate = this.price.multiply(this.rebateRate);
 		this.rebateForCustomer = this.rebate.multiply(RATIO).setScale(2, RoundingMode.FLOOR);
+		this.shortUrl = shortUrl;
 	}
 }
