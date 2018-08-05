@@ -55,13 +55,17 @@ public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
 				searchRequest.setSiteId(TAOBAO_SITE_ID);
 				searchRequest.setAdzoneId(TAOBAO_ADZONE_ID);
 				TbkScMaterialOptionalResponse searchResponse = client.execute(searchRequest, TAOBAO_SESSION_KEY);
-				if (searchResponse.getTotalResults() > 1) {
-					// Need to decide which one will be displayed to users
-					return Sets.newHashSet(doConvert(doPick(searchResponse.getResultList())));
-				} else if (searchResponse.getTotalResults() == 1) {
-					return Sets.newHashSet(doConvert(searchResponse.getResultList().get(0)));
-				} else {
+				if (searchResponse.getTotalResults() == null) {
 					return Collections.emptySet();
+				} else {
+					if (searchResponse.getTotalResults() > 1) {
+						// Need to decide which one will be displayed to users
+						return Sets.newHashSet(doConvert(doPick(searchResponse.getResultList())));
+					} else if (searchResponse.getTotalResults() == 1) {
+						return Sets.newHashSet(doConvert(searchResponse.getResultList().get(0)));
+					} else {
+						return Collections.emptySet();
+					}
 				}
 			} else {
 				// Return error page
@@ -82,9 +86,9 @@ public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
 		// 生成淘口令
 		TbkTpwdCreateRequest req = new TbkTpwdCreateRequest();
 		req.setUserId(TAOBAO_USER_ID);
-		req.setText("淘宝返利机器人");
-		req.setUrl("https:" + data.getUrl());
-		// req.setLogo("https://uland.taobao.com/");
+		req.setText(data.getTitle());
+		req.setLogo(data.getPictUrl());
+		req.setUrl("https:" + data.getCouponShareUrl());
 		// req.setExt("{}");
 		TbkTpwdCreateResponse rsp = client.execute(req);
 		if (StringUtils.isBlank(rsp.getErrorCode())) {

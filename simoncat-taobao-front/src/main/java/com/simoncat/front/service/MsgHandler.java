@@ -35,6 +35,9 @@ public class MsgHandler implements IMsgHandlerFace {
 			if (text.contains("【") && text.contains("】") && (text.contains("€") || text.contains("￥"))) {
 				// Extract Taobao token
 				Set<ProductInfoVo> results = service.fetch(text);
+				if (results.isEmpty()) {
+					return "没有搜索到该商品的返利";
+				}
 				ProductInfoVo vo = results.stream().findFirst().get();
 				return createTaobaoItemMessage(vo.getTitle(), vo.getOriginalPrice().toPlainString(),
 						vo.getPrice().toPlainString(), vo.getRebateForCustomer().toPlainString(),
