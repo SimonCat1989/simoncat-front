@@ -104,7 +104,7 @@ public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
 	private String generateShortUrl(String token, String picUrl) {
 		
 		try {
-			String oldUrl = URLEncoder.encode("http://192.168.61.128:8080/simoncat-taobao-front/index.do?token=" + token + "&good=" + picUrl, "UTF-8");
+			String oldUrl = URLEncoder.encode("http://www.simoncat.top/index.do?token=" + token + "&good=" + picUrl, "UTF-8");
 			return ParameterEncoder.encode(oldUrl);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
