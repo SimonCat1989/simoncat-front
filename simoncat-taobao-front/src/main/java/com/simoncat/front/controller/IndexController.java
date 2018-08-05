@@ -15,9 +15,7 @@ public class IndexController {
 	@RequestMapping(value = "/index.do", method = RequestMethod.GET)
 	public ModelAndView index(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap)
 			throws Exception {
-		modelMap.put("good",
-				"https://img.alicdn.com/imgextra/i1/1114511827/TB2ykqXpY9YBuNjy0FgXXcxcXXa_!!1114511827.jpg_430x430q90.jpg");
-		// modelMap.put("good", request.getParameter("good"));
+		modelMap.put("good", request.getParameter("good"));
 		modelMap.put("token", request.getParameter("token"));
 		return new ModelAndView("/index", modelMap);
 	}

@@ -39,7 +39,7 @@ public class MsgHandler implements IMsgHandlerFace {
 				return createTaobaoItemMessage(vo.getTitle(), vo.getOriginalPrice().toPlainString(),
 						vo.getPrice().toPlainString(), vo.getRebateForCustomer().toPlainString(),
 						StringUtils.isBlank(vo.getCouponInfo()) ? "没有优惠券" : vo.getCouponInfo(),
-						"http://www.simoncat.top/index.do?token=" + vo.getToken());
+						vo.getShortUrl());
 			} else if(text.startsWith("qqqqqqqqq")){
 				return new LinkMsg("http://www.baidu.com", "拉夏贝尔短裙2018夏装新款收腰百褶a字裙雪纺碎花chic半身裙子女","装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙装新款收腰百褶a字裙");
 			}

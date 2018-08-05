@@ -1,5 +1,6 @@
 package com.simoncat.front.service;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Collections;
 import java.util.List;
@@ -7,7 +8,6 @@ import java.util.Set;
 import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.client.utils.URIBuilder;
 
 import com.google.common.collect.Sets;
 import com.simoncat.front.vo.ProductInfoVo;
@@ -33,7 +33,7 @@ public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
 	private static final long TAOBAO_MEMBER_ID = 41431499L;
 	private static final long TAOBAO_SITE_ID = 43842211L;
 	private static final long TAOBAO_ADZONE_ID = 368920896L;
-	private static final String TAOBAO_SESSION_KEY = "610202312be6b20128c14d57d2d4475116ca0c81b01ae1b119103219";
+	private static final String TAOBAO_SESSION_KEY = "6100204a14b415977d36e325039c49a39f3a9a79c81d469119103219";
 	private static final String TAOBAO_USER_ID = "41431499";
 
 	private final TaobaoClient client;
@@ -102,8 +102,14 @@ public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
     String key = UUID.randomUUID().toString();
 	
 	private String generateShortUrl(String token, String picUrl) {
-		String oldUrl = URLEncoder.encode("http://www.simoncat.top/index.do?token=" + token); 
-		return ParameterEncoder.encode(oldUrl);
+		
+		try {
+			String oldUrl = URLEncoder.encode("http://192.168.61.128:8080/simoncat-taobao-front/index.do?token=" + token + "&good=" + picUrl, "UTF-8");
+			return ParameterEncoder.encode(oldUrl);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} 
+		return "";
 	}
 
 	public static void main(String[] args) {
