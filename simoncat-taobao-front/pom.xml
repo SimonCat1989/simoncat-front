@@ -117,9 +117,7 @@
     <dependency>
       <groupId>com.taobao</groupId>
       <artifactId>taobao-sdk-java</artifactId>
-      <scope>system</scope>
       <version>1.0</version>
-      <systemPath>/home/simoncat/Develop/Downloads/taobao-sdk-java-auto_1521526934105-20180714.jar</systemPath>
     </dependency>
   </dependencies>
 
