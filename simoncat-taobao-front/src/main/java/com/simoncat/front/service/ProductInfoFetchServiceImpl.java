@@ -5,7 +5,8 @@ import java.net.URLEncoder;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
+
+import lombok.extern.slf4j.Slf4j;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -22,6 +23,7 @@ import com.taobao.api.response.TbkScMaterialOptionalResponse.MapData;
 import com.taobao.api.response.TbkTpwdCreateResponse;
 import com.taobao.api.response.WirelessShareTpwdQueryResponse;
 
+@Slf4j
 public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
 
 	private static final String TAOBAO_CLIENT_URL = "http://gw.api.taobao.com/router/rest";
@@ -70,12 +72,11 @@ public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
 			} else {
 				// Return error page
 			}
-			System.out.println(rsp.getBody());
+			log.debug("Get response {}", rsp.getBody());
 		} catch (ApiException e) {
-			e.printStackTrace();
+			log.error("Failed to fetch data with keyword {}",keyword, e);
 		}
-
-		return null;
+		return Collections.emptySet();
 	}
 
 	private MapData doPick(List<MapData> datas) {
@@ -102,16 +103,13 @@ public class ProductInfoFetchServiceImpl implements ProductInfoFetchService {
 		return null;
 	}
 	
-	// 可以自定义生成 MD5 加密字符传前的混合 KEY
-    String key = UUID.randomUUID().toString();
-	
 	private String generateShortUrl(String token, String picUrl) {
-		
 		try {
 			String oldUrl = URLEncoder.encode("http://www.simoncat.top/index.do?token=" + token + "&good=" + picUrl, "UTF-8");
 			return ParameterEncoder.encode(oldUrl);
 		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
+			log.error("Can not encode URL with Token {}, picture URL {}",
+					token, picUrl, e);
 		} 
 		return "";
 	}
